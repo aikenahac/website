@@ -49,13 +49,6 @@ function Home() {
                 <a href="https://linkedin.com/in/aahac" className="header-link">
                   LinkedIn
                 </a>
-                |
-                <a
-                  href={process.env.PUBLIC_URL + '/contact'}
-                  className="header-link"
-                >
-                  Contact
-                </a>
               </p>
             </div>
           ) : null}
@@ -70,6 +63,17 @@ function Home() {
             of 15. When I was 17 I founded a software company with{' '}
             <a href="https://gasperd.com">Gašper Dobrovoljc</a>.
           </p>
+          <br />
+          <br />
+          <h1 className="landing-title">Contact</h1>
+          <br />
+          <ul className="project-list">
+            <li className="landing-text">
+              E-mail: me@aikenahac.com | ahac.aiken@gmail.com
+            </li>
+            <li className="landing-text">Phone: +386 40 206 945</li>
+            <li className="landing-text">Discord: Axodus#6112</li>
+          </ul>
           <br />
           <br />
           <h1 className="landing-title">Significant projects</h1>

@@ -2,17 +2,13 @@ import '../assets/App.css';
 
 function Footer() {
   return (
-    <footer className="footer">
-      <p className="link-hider">
-        Made in an hour with{' '}
-        <a
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-          rel="noreferrer"
-          target="_blank"
-        >
-          pizza
-        </a>
-      </p>
+    <footer
+      className="footer"
+      onClick={() =>
+        window.location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+      }
+    >
+      <p className="link-hider">Made in an hour with pizza.</p>
     </footer>
   );
 }

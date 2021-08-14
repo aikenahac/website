@@ -1,20 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/index.css';
-import Routes from './Router';
-import { Router } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
 import { Footer } from './components';
-
-const browserHistory = createBrowserHistory({
-  basename: process.env.PUBLIC_URL,
-});
+import { Home } from './pages';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={browserHistory}>
-      <Routes />
-    </Router>
+    <Home />
     <Footer />
   </React.StrictMode>,
   document.getElementById('root'),
