@@ -157,6 +157,11 @@ function Home() {
               </a>
             </li>
             <li className="landing-text">
+              <a href="https://vegahq.com/" target="_blank" rel="noreferrer">
+                A podcast I host with some friends
+              </a>
+            </li>
+            <li className="landing-text">
               <p onClick={playPower} className="landing-text-link-bait">
                 Power
               </p>
