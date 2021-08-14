@@ -60,8 +60,7 @@ function Home() {
             I'm a software developer and computer science student @{' '}
             <a href="https://www.vegova.si/">Vegova Ljubljana</a>. I started
             coding at around the age of 10 or 11, and began my career at the age
-            of 15. When I was 17 I founded a software company with{' '}
-            <a href="https://gasperd.com">Gašper Dobrovoljc</a>.
+            of 15. When I was 17 I founded a software company.
           </p>
           <br />
           <br />
