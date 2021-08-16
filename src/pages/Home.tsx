@@ -109,7 +109,7 @@ function Home() {
           <br />
           <ul className="project-list">
             <li className="landing-text">
-              1.2.2021 - current: CEO & CO-Founder @ Aerio d.o.o.
+              1.2.2021 - current: CEO & Co-Founder @ Aerio d.o.o.
             </li>
             <li className="landing-text">
               16.5.2021 - current: Developer & Co-Founder @ More4Youth d.o.o.

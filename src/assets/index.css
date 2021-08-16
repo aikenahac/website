@@ -15,11 +15,11 @@ code {
 
 ::-webkit-scrollbar {
   width: 5px;
-  border-radius: 15px 0 0 15px;
 }
 
 ::-webkit-scrollbar-track {
   background: #424242;
+  border-radius: 15px 0 0 15px;
 }
 
 ::-webkit-scrollbar-thumb {
