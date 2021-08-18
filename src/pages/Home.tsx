@@ -118,7 +118,7 @@ function Home() {
               19.11.2020 - current: Developer @ IPM Komunikacije d.o.o.
             </li>
             <li className="landing-text">
-              19.6.2019 - current: Lead Developer @ YFLab d.o.o.
+              19.6.2019 - 18.8.2021: Lead Developer @ YFLab d.o.o.
             </li>
             <li className="landing-text">
               <a
