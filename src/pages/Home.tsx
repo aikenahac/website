@@ -112,7 +112,7 @@ function Home() {
               1.2.2021 - current: CEO & Co-Founder @ Aerio d.o.o.
             </li>
             <li className="landing-text">
-              16.5.2021 - current: Developer & Co-Founder @ More4Youth d.o.o.
+              16.5.2021 - current: Developer @ More4Youth d.o.o.
             </li>
             <li className="landing-text">
               19.11.2020 - current: Developer @ IPM Komunikacije d.o.o.
