@@ -70,7 +70,7 @@ function Home() {
             <li className="landing-text">
               E-mail: me@aikenahac.com | ahac.aiken@gmail.com
             </li>
-            <li className="landing-text">Discord: Axodus#6112</li>
+            <li className="landing-text">Discord: Axodus#0001</li>
           </ul>
           <br />
           <br />
@@ -83,7 +83,7 @@ function Home() {
           <br />
           <ul className="project-list">
             <li className="landing-text">
-              <a href="https://orb.si">Orb</a> - a software company that I
+              <a href="https://aerio.tech">Aerio</a> - a software company that I
               Co-Founded with{' '}
               <a href="https://gasperd.com">Gašper Dobrovoljc</a>
             </li>
