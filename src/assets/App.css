@@ -131,10 +131,6 @@ a:visited {
   -webkit-touch-callout: none;
 }
 
-.portal-gun-hover {
-  cursor: url('./portal_gun_cursor.png'), auto;
-}
-
 @media (max-width: 400px) {
   .projects-and-about {
     padding-left: 7vw;

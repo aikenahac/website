@@ -4,12 +4,6 @@ import { useEffect, useState } from 'react';
 
 function Home() {
   const [links, setLinks] = useState(false);
-  const power = new Audio(process.env.PUBLIC_URL + 'power.mp3');
-  power.volume = 0.1;
-
-  const playPower = () => {
-    power.play();
-  };
 
   useEffect(() => {
     const Writer = new GlitchedWriter('#name_title', {
@@ -68,9 +62,9 @@ function Home() {
           <br />
           <ul className="project-list">
             <li className="landing-text">
-              E-mail: me@aikenahac.com | ahac.aiken@gmail.com
+              E-mail: me@aikenahac.com | ahac.aiken@gmail.com | aiken@aerio.tech
             </li>
-            <li className="landing-text">Discord: Axodus#6112</li>
+            <li className="landing-text">Discord: Axodus#0001</li>
           </ul>
           <br />
           <br />
@@ -83,7 +77,7 @@ function Home() {
           <br />
           <ul className="project-list">
             <li className="landing-text">
-              <a href="https://orb.si">Orb</a> - a software company that I
+              <a href="https://aerio.tech">Aerio</a> - a software company that I
               Co-Founded with{' '}
               <a href="https://gasperd.com">Gašper Dobrovoljc</a>
             </li>
@@ -92,7 +86,8 @@ function Home() {
               children, pets, bikes, ...
             </li>
             <li className="landing-text">
-              <a href="https://fundl.si">Fundl</a> - shhhhhh
+              <a href="https://fundl.si">Fundl</a> - A platform that gathers top
+              deals on a single app.
             </li>
             <li className="landing-text">
               <a href="https://github.com/aikenahac/dotbot">DotBot</a> - a
@@ -109,13 +104,13 @@ function Home() {
           <br />
           <ul className="project-list">
             <li className="landing-text">
-              1.2.2021 - current: CEO & Co-Founder @ Aerio d.o.o.
-            </li>
-            <li className="landing-text">
-              16.5.2021 - current: Developer @ More4Youth d.o.o.
+              1.2.2021 - current: CEO & Co-Founder @ Aerio
             </li>
             <li className="landing-text">
               19.11.2020 - current: Developer @ IPM Komunikacije d.o.o.
+            </li>
+            <li className="landing-text">
+              16.5.2021 - current: IT Team Lead @ Fundl | More4Youth d.o.o.
             </li>
             <li className="landing-text">
               19.6.2019 - 18.8.2021: Lead Developer @ YFLab d.o.o.
@@ -125,7 +120,6 @@ function Home() {
                 href={process.env.PUBLIC_URL + 'cv.pdf'}
                 rel="noreferrer"
                 target="_blank"
-                className="portal-gun-hover"
               >
                 View my CV
               </a>
@@ -162,11 +156,6 @@ function Home() {
               <a href="https://vegahq.com/" target="_blank" rel="noreferrer">
                 A podcast I host with some friends
               </a>
-            </li>
-            <li className="landing-text">
-              <p onClick={playPower} className="landing-text-link-bait">
-                Power
-              </p>
             </li>
           </ul>
         </div>
