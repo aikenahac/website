@@ -110,7 +110,7 @@ function Home() {
               19.11.2020 - current: Developer @ IPM Komunikacije d.o.o.
             </li>
             <li className="landing-text">
-              16.5.2021 - current: IT Team Lead @ Fundl | More4Youth d.o.o.
+              16.5.2021 - 6.11.2021: IT Team Lead @ Fundl | More4Youth d.o.o.
             </li>
             <li className="landing-text">
               19.6.2019 - 18.8.2021: Lead Developer @ YFLab d.o.o.
