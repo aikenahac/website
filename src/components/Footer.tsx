@@ -9,6 +9,7 @@ function Footer() {
       }
     >
       <p className="link-hider">Made in an hour with pizza.</p>
+      <a href="https://me.aikenahac.com">Social media links</a>
     </footer>
   );
 }
