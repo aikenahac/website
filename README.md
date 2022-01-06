@@ -1,3 +1,3 @@
 # Personal website
 
-This is just my personal website...
+My personal website, accessible at [aikenahac.com](https://aikenahac.com).
