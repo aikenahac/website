@@ -64,7 +64,7 @@ function Home() {
             <li className="landing-text">
               E-mail: me@aikenahac.com | ahac.aiken@gmail.com | aiken@aerio.tech
             </li>
-            <li className="landing-text">Discord: Axodus#8405</li>
+            <li className="landing-text">Discord: Axodus#0001</li>
           </ul>
           <br />
           <br />
