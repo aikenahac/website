@@ -53,7 +53,7 @@ function Home() {
           <p className="landing-text justify">
             I'm a software developer and computer science student @{' '}
             <a href="https://www.vegova.si/">Vegova Ljubljana</a>. I started
-            coding at around the age of 10 or 11, and began my career at the age
+            coding at around the age of 8, and began my career at the age
             of 15. When I was 17 I founded a software company.
           </p>
           <br />
