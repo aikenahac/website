@@ -71,15 +71,24 @@ function Home() {
           <h1 className="landing-title">Significant projects</h1>
           <br />
           <p className="landing-text justify">
-            A list of the most significant projects I worked and collaborated
-            on.
+            A list of the most significant projects and companies I've worked and collaborated
+            with.
           </p>
           <br />
           <ul className="project-list">
             <li className="landing-text">
               <a href="https://aerio.tech">Aerio</a> - a software company that I
               Co-Founded with{' '}
-              <a href="https://gasperd.com">Gašper Dobrovoljc</a>
+              <a href="https://gapi.me">Gašper Dobrovoljc</a>
+            </li>
+            <li className="landing-text">
+              <a href="https://glcharge.com/">GL Charge</a> - premium Slovenian chargers for electric vehicles.
+            </li>
+            <li className="landing-text">
+              <a href="https://easistent.com">eAsistent eŠola d.o.o.</a> - digital assistant for schools in Slovenia.
+            </li>
+            <li className="landing-text">
+              <a href="https://simpliservers.com//">SimpliServers</a> - high performance VPS & shared hosting
             </li>
             <li className="landing-text">
               <a href="https://yourflare.io">YourFlare</a> - a smart tracker for
@@ -87,7 +96,7 @@ function Home() {
             </li>
             <li className="landing-text">
               <a href="https://fundl.si">Fundl</a> - A platform that gathers top
-              deals on a single app.
+              deals on a single app, targeted for Gen Z.
             </li>
             <li className="landing-text">
               <a href="https://github.com/aikenahac/dotbot">DotBot</a> - a
@@ -107,7 +116,13 @@ function Home() {
               1.2.2021 - current: CEO & Co-Founder @ Aerio
             </li>
             <li className="landing-text">
-              19.11.2020 - current: Developer @ IPM Komunikacije d.o.o.
+              09.03.2022 - current: Software Developer @ eAsistent eŠola d.o.o.
+            </li>
+            <li className="landing-text">
+              11.11.2021 - current: Marketing Team Lead & Developer @ SimpliServers 
+            </li>
+            <li className="landing-text">
+              19.11.2020 - 08.03.2022: Software Developer @ IPM Komunikacije d.o.o.
             </li>
             <li className="landing-text">
               16.5.2021 - 6.11.2021: IT Team Lead @ Fundl | More4Youth d.o.o.
