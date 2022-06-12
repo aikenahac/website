@@ -91,7 +91,7 @@ function Home() {
               <a href="https://simpliservers.com//">SimpliServers</a> - high performance VPS & shared hosting
             </li>
             <li className="landing-text">
-              <a href="https://yourflare.io">YourFlare</a> - a smart tracker for
+              <a href="https://getflare.eu">YourFlare</a> - a smart tracker for
               children, pets, bikes, ...
             </li>
             <li className="landing-text">
