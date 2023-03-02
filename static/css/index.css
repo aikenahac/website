@@ -66,6 +66,14 @@ body {
   margin-top: 40px;
 }
 
+#spotify {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: 40px;
+}
+
 #people {
   display: flex;
   flex-direction: column;
@@ -78,6 +86,7 @@ body {
 #projects > h1,
 #work > h1,
 #misc > h1,
+#spotify > h1,
 #people > h1 {
   font-family: "Montserrat";
   font-size: 3rem;
