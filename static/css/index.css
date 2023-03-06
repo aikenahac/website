@@ -82,12 +82,7 @@ body {
   margin-top: 40px;
 }
 
-#about-me > h1,
-#projects > h1,
-#work > h1,
-#misc > h1,
-#spotify > h1,
-#people > h1 {
+.section-title {
   font-family: "Montserrat";
   font-size: 3rem;
   font-weight: bold;
@@ -244,4 +239,14 @@ footer > p > a {
   color: #fff;
   font-family: "Montserrat";
   text-align: center;
+}
+
+.playlist {
+  width: 600px;
+}
+
+@media screen and (max-width: 750px) {
+  .playlist {
+    width: 80vw;
+  }
 }
