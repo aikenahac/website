@@ -4,24 +4,31 @@
 -------------------------------
 */
 
+:root {
+  --bg-color: #1a1a1a;
+  --fg-color: #f0f0f0;
+}
+
 @font-face {
-  font-family: "Montserrat";
-  src: url("/static/fonts/Montserrat.ttf");
+  font-family: "SourceCodePro";
+  src: url("/static/fonts/SourceCodePro.ttf");
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-family: "SourceCodePro";
 }
 
 body {
-  background-color: #2e3440;
+  background-color: var(--bg-color);
   margin: 0px !important;
   padding: 0px !important;
+  overflow-x: hidden;
 }
 
-html,
-body {
+html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -33,6 +40,41 @@ body {
   height: 100vh;
 }
 
+.scroll {
+  justify-self: self-end;
+  font-size: 1rem;
+  color: #f0f0f0;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.headshot {
+  width: 250px;
+  height: 250px;
+  margin-top: auto;
+}
+
+.head-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--fg-color);
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.head-subtitle {
+  font-size: 1.5rem;
+  color: #cccbcf;
+}
+
+.socials {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--fg-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
 #about-me {
   display: flex;
   flex-direction: column;
@@ -42,94 +84,32 @@ body {
   padding-right: 10vw;
 }
 
+.a-text {
+  font-size: 1.5rem;
+  color: var(--fg-color);
+  width: 80vw;
+  padding-bottom: 15px;
+}
+
+.a-text > a {
+  color: var(--fg-color);
+}
+
+.about-container {
+  position: relative;
+}
+
+.about {
+  height: 100px;
+  overflow: hidden;
+}
+
 #projects {
   display: flex;
   flex-direction: column;
   padding-left: 10vw;
   padding-right: 10vw;
   margin-top: 40px;
-}
-
-#work {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  margin-top: 40px;
-}
-
-#misc {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  margin-top: 40px;
-}
-
-#spotify {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  margin-top: 40px;
-}
-
-#people {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  margin-top: 40px;
-}
-
-.section-title {
-  font-family: "Montserrat";
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
-  padding-bottom: 25px;
-}
-
-#about-me > p {
-  font-size: 1.5rem;
-  font-family: "Montserrat";
-  color: #fff;
-  text-align: justify;
-  width: 80vw;
-  padding-bottom: 15px;
-}
-
-#about-me > p > a {
-  color: #fff;
-}
-
-.headshot {
-  width: 250px;
-  height: 250px;
-}
-
-.head-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  font-family: "Montserrat";
-  padding-bottom: 15px;
-}
-
-.head-subtitle {
-  font-size: 1.5rem;
-  color: #cccbcf;
-  font-family: "Montserrat";
-}
-
-.socials {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  font-family: "Montserrat";
-  cursor: pointer;
-  text-decoration: none;
 }
 
 .projects-row {
@@ -157,16 +137,14 @@ body {
 .project > h1 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
-  font-family: "Montserrat";
+  color: var(--fg-color);
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .project > p {
   font-size: 1rem;
-  color: #fff;
-  font-family: "Montserrat";
+  color: var(--fg-color);
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -179,7 +157,6 @@ body {
   margin-top: 20px;
   width: 60%;
   height: 10%;
-  font-family: "Montserrat";
   text-decoration: none;
   border: none;
   border-radius: 5px;
@@ -189,13 +166,21 @@ body {
 
 .project > button > p {
   font-size: 1rem;
-  color: #fff;
+  color: var(--fg-color);
 }
 
 .project > img {
   width: 150px;
   height: 150px;
   border-radius: 100px;
+}
+
+#work {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: 40px;
 }
 
 .work-list {
@@ -205,9 +190,43 @@ body {
 
 .list-text,
 .list-text > a {
-  color: #fff;
+  color: var(--fg-color);
   font-size: 1.5rem;
-  font-family: "Montserrat";
+}
+
+#misc {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: 40px;
+}
+
+#spotify {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: 40px;
+}
+
+.playlist {
+  width: 600px;
+}
+
+#people {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: 40px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--fg-color);
+  padding-bottom: 25px;
 }
 
 footer {
@@ -227,8 +246,7 @@ footer {
 
 footer > p {
   font-size: 1.5rem;
-  color: #fff;
-  font-family: "Montserrat";
+  color: var(--fg-color);
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -236,13 +254,8 @@ footer > p {
 
 footer > p > a {
   font-size: 1.5rem;
-  color: #fff;
-  font-family: "Montserrat";
+  color: var(--fg-color);
   text-align: center;
-}
-
-.playlist {
-  width: 600px;
 }
 
 @media screen and (max-width: 750px) {
