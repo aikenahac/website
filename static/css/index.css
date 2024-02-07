@@ -150,6 +150,11 @@ html {
   padding-right: 10px;
 }
 
+.project > p > a {
+  font-size: 1rem;
+  color: var(--fg-color);
+}
+
 .project > button {
   font-size: 1.5rem;
   font-weight: bold;
@@ -169,10 +174,17 @@ html {
   color: var(--fg-color);
 }
 
-.project > img {
+.project > img,
+.project > div {
   width: 150px;
   height: 150px;
   border-radius: 100px;
+}
+
+.project > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #work {
