@@ -34,7 +34,7 @@ importers:
         version: 2.4.2(svelte@5.2.2)
     devDependencies:
       '@sveltejs/adapter-auto':
-        specifier: ^3.0.0
+        specifier: ^3.3.1
         version: 3.3.1(@sveltejs/kit@2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.2)(vite@5.4.11))(svelte@5.2.2)(vite@5.4.11))
       '@sveltejs/kit':
         specifier: ^2.0.0

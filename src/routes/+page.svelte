@@ -7,6 +7,7 @@
 	import { faLink } from '@fortawesome/free-solid-svg-icons';
 	import type { PageData } from './$types';
 	import moment from 'moment';
+	import l from '$lib/assets/l.gif';
 
 	const socials: Social[] = [
 		{
@@ -123,12 +124,14 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<div class="mt-8 flex w-full flex-row gap-8">
-	<div class="justify between flex flex-row items-center rounded-sm border border-aipink p-6">
-		<img class="mr-12 h-96 rounded-sm" src={me} alt={$t('home.me_img_alt')} />
+<div class="mt-8 flex w-full flex-row gap-8 max-[1120px]:flex-col max-[860px]:justify-center">
+	<div
+		class="flex w-full flex-row items-center justify-between rounded-sm border border-aipink p-8 max-[860px]:flex-col max-[860px]:justify-center"
+	>
+		<img class="w-[50%] rounded-sm mr-4 max-[860px]:mb-4" src={me} alt={$t('home.me_img_alt')} />
 		<div class="flex flex-col items-center justify-start">
-			<h1 class="font-mono text-4xl font-bold text-aipink">Aiken Tine Ahac</h1>
-			<p class="font-mono text-xl text-aipink">Full-Stack Developer</p>
+			<h1 class="text-center font-mono text-4xl font-bold text-aipink">Aiken Tine Ahac</h1>
+			<p class="text-center font-mono text-xl text-aipink">Full-Stack Developer</p>
 			<div class="mt-6 flex flex-row gap-2 text-lg">
 				{#each socials as social}
 					<a href={social.link} target="_blank">
@@ -142,7 +145,15 @@
 		</div>
 	</div>
 
-	<div class="justify between flex flex-row items-center rounded-sm border border-aipink p-6"></div>
+	<div
+		class="flex w-full flex-col gap-2 justify-center items-center rounded-sm border border-aipink p-6"
+	>
+		<img
+			class="w-full rounded-sm"
+			src={l}
+			alt="L"
+		/>
+	</div>
 </div>
 
 <div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
@@ -174,12 +185,20 @@
 	<h1 class="font-mono text-2xl font-bold text-aipink">{$t('home.net_friends')}</h1>
 	<ul class="list-['♱']">
 		{#each friends as { name, url }}
-			<li class="ml-6 pl-2 font-mono text-aipink underline"><a href={url} target="_blank">{name}</a></li>
+			<li class="ml-6 pl-2 font-mono text-aipink underline">
+				<a href={url} target="_blank">{name}</a>
+			</li>
 		{/each}
 	</ul>
 </div>
 
-<div class="mt-8 flex w-full items-center justify-center flex-col gap-4 rounded-sm border border-aipink p-6">
-	<p class="font-mono text-aipink">{$t("home.made")}</p>
-	<a class="font-mono text-aipink underline" href="https://github.com/aikenahac/website" target="_blank">{$t("home.oss")}</a>
+<div
+	class="mt-8 flex w-full flex-col items-center justify-center gap-4 rounded-sm border border-aipink p-6"
+>
+	<p class="font-mono text-aipink">{$t('home.made')}</p>
+	<a
+		class="font-mono text-aipink underline"
+		href="https://github.com/aikenahac/website"
+		target="_blank">{$t('home.oss')}</a
+	>
 </div>
