@@ -179,7 +179,7 @@
 	</ul>
 </div>
 
-<div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
+<div class="mt-8 flex w-full items-center justify-center flex-col gap-4 rounded-sm border border-aipink p-6">
 	<p class="font-mono text-aipink">{$t("home.made")}</p>
-	<a class="font-mono text-aipink underline" href="">{$t("home.oss")}</a>
+	<a class="font-mono text-aipink underline" href="https://github.com/aikenahac/website" target="_blank">{$t("home.oss")}</a>
 </div>
