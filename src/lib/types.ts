@@ -26,3 +26,9 @@ export interface JobItem {
   item4?: string;
   item5?: string;
 }
+
+export interface ProjectItem {
+  title: string;
+  url: string;
+  description: string;
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Projekti in ostalo",
+  "frivsspr": {
+    "title": "FRI VSŠ Predmetnik",
+    "description": "Predmetnik za izobraževanje na visokošolski smeri na Univerzi v Ljubljani, Fakulteti za računalništvo in informatiko."
+  },
+  "socialko": {
+    "title": "Socialko",
+    "description": "Socialno omrežje za kulteorganizacije, narejeno za maturitetno nalogo."
+  },
+  "hdwyg": {
+    "title": "HDWYG",
+    "description": "How Deep Will You Go - Connections that feel good is the north star. This is the rocket ship to get there. Original is the perfect game of emotional connection."
+  },
+  "routes": {
+    "title": "Google Maps Routes",
+    "description": "Knjižnjica za Flutter, ki omogoča risanje poti na Google Map widget."
+  },
+  "app_tutorial": {
+    "title": "Flutter App Tutorial",
+    "description": "Knjižnjica za Flutter, za ustvarjanje interaktivnih tutorialov aplikacije."
+  },
+  "imageproc": {
+    "title": "Web image processor",
+    "description": "Preprosta spletna aplikacija za urejanje slike."
+  }
+}

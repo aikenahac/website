@@ -1,0 +1,27 @@
+{
+  "title": "My projects",
+  "frivsspr": {
+    "title": "FRI VSŠ Curriculum",
+    "description": "Curriculum for the education at the University of Ljubljana, Faculty of Computer and Information Science"
+  },
+  "socialko": {
+    "title": "Socialko",
+    "description": "Social media for cultsorganizations built as a graduation project."
+  },
+  "hdwyg": {
+    "title": "HDWYG",
+    "description": "How Deep Will You Go - Connections that feel good is the north star. This is the rocket ship to get there. Original is the perfect game of emotional connection."
+  },
+  "routes": {
+    "title": "Google Maps Routes",
+    "description": "Flutter package for drawing routes between multiple points on a Google Map widget."
+  },
+  "app_tutorial": {
+    "title": "Flutter App Tutorial",
+    "description": "Package for creating interactive app tutorials for your Flutter application"
+  },
+  "imageproc": {
+    "title": "Web image processor",
+    "description": "Simple web app for processing images."
+  }
+}

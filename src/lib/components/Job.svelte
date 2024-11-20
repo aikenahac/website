@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { t } from '$lib/translations';
 	import type { JobItem } from '$lib/types';
 
   let { job }: { job: JobItem } = $props();
