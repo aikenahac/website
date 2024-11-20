@@ -20,6 +20,14 @@ const config: Config = ({
       ).default,
     },
     {
+      locale: 'sl',
+      key: 'work',
+      routes: ['/work'], 
+      loader: async () => (
+        await import('./i18n/sl/work.json')
+      ).default,
+    },
+    {
       locale: 'en',
       key: 'common',
       loader: async () => (
@@ -32,6 +40,14 @@ const config: Config = ({
       routes: ['/'], 
       loader: async () => (
         await import('./i18n/en/home.json')
+      ).default,
+    },
+    {
+      locale: 'en',
+      key: 'work',
+      routes: ['/work'], 
+      loader: async () => (
+        await import('./i18n/en/work.json')
       ).default,
     },
   ],

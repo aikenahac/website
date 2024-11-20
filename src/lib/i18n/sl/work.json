@@ -1,0 +1,54 @@
+{
+  "title": "Kje delam/sem delu",
+  "current": "current",
+  "aerio": {
+    "title": "Co-Founder @ Aerio",
+    "location": "Ljubljana, Slovenia",
+    "description": "Aerio is a group of young tech enthusiasts and creators.",
+    "description2": "We're specialized in software, audio, and media production.",
+    "description3": "Our passion for technology drives us to innovate and push boundaries in our respective fields."
+  },
+  "easistent": {
+    "title": "Software Developer @ eAsistent eŠola d.o.o.",
+    "location": "Ljubljana, Slovenia",
+    "description": "At eAsistent I played a large role in developing the React Native application mojAsistent, a mobile app used by over 100k students.",
+    "description2": "I also played a pivotal role in creating the mobile application for parents of kindergarteners built in the Flutter framework.",
+    "description3": "I then moved to the team that was building the new mobile app for the parents of schoolchildren also built in React Native and used by over 200k parents.",
+    "description4": "At all of the projects I worked with teams of remarkable people to bring exceptional products to our customers."
+  },
+  "fri": {
+    "title": "Student Council Member @ UL FRI",
+    "location": "Ljubljana, Slovenia",
+    "description": "Voted into the council in November 2023, but I had to remove myself in April 2024 after ending my education at the institution."
+  },
+  "vegova": {
+    "title": "CS Teacher @ Vegova Ljubljana",
+    "location": "Ljubljana, Slovenia",
+    "description": "After completing my education at this institution, I took on a teaching role. I taught the practical class for a computer science subject that covers:",
+    "item": "Computer-Person interfaces",
+    "item2": "Communication with clients",
+    "item3": "Agile principles",
+    "item4": "Web design (HTML, CSS, JS)",
+    "item5": "Kernel image processing"
+  },
+  "identisoft": {
+    "title": "Software Development Intern @ Identisoft",
+    "location": "Braga, Portugal",
+    "description": "Within the scope of the ERASMUS program I got to join the Identisoft company in Braga, Portugal for a month.",
+    "description2": "My task at Identisoft was to implement the MINTTI Vision Java SDK into an Android application which is used to communicate with and control the MINTTI Healthcare device.",
+    "description3": "The app was an interface to start measurements on the device, such as blood pressure, blood glucose, body temperature, SPO2 and doing an ECG with a visual representation.",
+    "description4": "Later on, I also had to use another SDK for a second application which only communicated with a ECG specific device."
+  },
+  "fundl": {
+    "title": "CTO & Co-Founder @ Fundl",
+    "location": "Ljubljana, Slovenia",
+    "description": "In May 2021, myself and my team from Aerio joined the joined a small team and Co-Founded the Fundl startup. We took on the role of creating and maintaining the app, website, administration panel along with the entire system and supporting over 10k users.",
+    "description2": "My role was to oversee and collaborate on all development and communicate with other teams within the company such as design, business development, marketing, and the management."
+  },
+  "flare": {
+    "title": "Lead Developer @ YFLab d.o.o.",
+    "location": "Ljubljana, Slovenia",
+    "description": "At the YourFlare startup, that progressed into the company YFLab d.o.o., my initial task was to create a web app for clients to use as their main tool to interact with our product. Later on, we wanted to create a mobile app, so I took on that task and started the development of our mobile app in the Flutter framework.",
+    "description2": "After being a developer at the firm for less than a year, I was presented with the task of overseeing the development, along with the creation and maintenance of the internal tools used for business processes."
+  }
+}

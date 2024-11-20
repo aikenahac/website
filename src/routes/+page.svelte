@@ -191,14 +191,3 @@
 		{/each}
 	</ul>
 </div>
-
-<div
-	class="mt-8 flex w-full flex-col items-center justify-center gap-4 rounded-sm border border-aipink p-6"
->
-	<p class="font-mono text-aipink">{$t('home.made')}</p>
-	<a
-		class="font-mono text-aipink underline"
-		href="https://github.com/aikenahac/website"
-		target="_blank">{$t('home.oss')}</a
-	>
-</div>
