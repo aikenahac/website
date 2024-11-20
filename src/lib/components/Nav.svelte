@@ -36,7 +36,7 @@
 </script>
 
 <div
-	class="flex w-full flex-row items-center justify-start rounded-sm border border-aipink px-4 py-2 max-[860px]:grid max-[860px]:grid-cols-3"
+	class="flex w-full flex-row items-center justify-start rounded-sm border border-aipink px-4 py-2 max-[860px]:grid max-[860px]:grid-cols-2"
 >
 	{#each routes as route, i}
 		<a class={[text, route.path === $page.url.pathname && 'font-bold'].join(' ')} href={route.path}
