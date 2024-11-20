@@ -1,0 +1,13 @@
+{
+  "me_img_alt": "Slika mene",
+
+  "about_me": {
+    "title": "O meni",
+    "intro": "Zdravo popotnik! Sem Aiken, $age$-letni programer iz Slovenije, trenutno pa živim v prelepem starem centru Ljubljane. S startupi delam že več kot $yrs$ let, trenutno sem zaposlen pri $work$, prav tako sem pa soustanovitelj $aer$."
+  },
+  "gear": "Oprema",
+  "tech": "Personal Stack",
+  "net_friends": "Kolegi z medmrežja",
+  "made": "Narejeno v Ljubljani 🐉",
+  "oss": "Ta spletna stran je odprtokodna"
+}
