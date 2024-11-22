@@ -154,14 +154,14 @@
 </div>
 
 <div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
-	<h1 class="font-mono text-2xl font-bold text-aipink">{$t('home.about_me.title')}</h1>
+	<h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.about_me.title')}</h2>
 	<p class="font-mono text-aipink">
 		{@html getAboutMe()}
 	</p>
 </div>
 
 <div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
-	<h1 class="font-mono text-2xl font-bold text-aipink">{$t('home.gear')}</h1>
+	<h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.gear')}</h2>
 	<ul class="list-['♱']">
 		{#each gear as item}
 			<li class="ml-6 pl-2 font-mono text-aipink">{item}</li>
@@ -170,7 +170,7 @@
 </div>
 
 <div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
-	<h1 class="font-mono text-2xl font-bold text-aipink">{$t('home.tech')}</h1>
+	<h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.tech')}</h2>
 	<ul class="list-['♱']">
 		{#each tech as item}
 			<li class="ml-6 pl-2 font-mono text-aipink">{item}</li>
@@ -179,7 +179,7 @@
 </div>
 
 <div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
-	<h1 class="font-mono text-2xl font-bold text-aipink">{$t('home.net_friends')}</h1>
+	<h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.net_friends')}</h2>
 	<ul class="list-['♱']">
 		{#each friends as { name, url }}
 			<li class="ml-6 pl-2 font-mono text-aipink underline">

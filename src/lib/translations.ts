@@ -44,6 +44,14 @@ const config: Config = ({
       ).default,
     },
     {
+      locale: 'sl',
+      key: 'music',
+      routes: ['/music'], 
+      loader: async () => (
+        await import('./i18n/sl/music.json')
+      ).default,
+    },
+    {
       locale: 'en',
       key: 'common',
       loader: async () => (
@@ -80,6 +88,14 @@ const config: Config = ({
       routes: ['/highlights'], 
       loader: async () => (
         await import('./i18n/en/highlights.json')
+      ).default,
+    },
+    {
+      locale: 'en',
+      key: 'music',
+      routes: ['/music'], 
+      loader: async () => (
+        await import('./i18n/en/music.json')
       ).default,
     },
   ],

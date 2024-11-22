@@ -6,6 +6,7 @@
   <img
     class="rounded-sm h-full w-full object-cover"
     src={url}
+    loading="lazy"
     alt="me"
   />
 </div>

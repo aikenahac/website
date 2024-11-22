@@ -8,6 +8,9 @@ export default {
       colors: {
         aipink: "#D423C6",
         aiblack: "#171512",
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
       }
     }
   },
