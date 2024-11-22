@@ -1,4 +1,4 @@
-import { abstractSongResponseSchema, songResponseSchema, type SpotifySong } from "./types";
+import { abstractSongResponseSchema, type SpotifySong } from "./types";
 
 export async function getCurrentlyPlaying(access_token: string) {
   const res = await fetch(
@@ -18,6 +18,7 @@ export async function getCurrentlyPlaying(access_token: string) {
     title: parsed.data.item.name,
     artists: parsed.data.item.artists.map(({ name }) => name).join(", "),
     coverUrl: parsed.data.item.album.images[0].url,
+    playing: parsed.data.is_playing,
   } : undefined;
 
   return currentlyPlaying;

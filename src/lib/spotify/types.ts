@@ -4,6 +4,7 @@ export interface SpotifySong {
 	title: string;
 	artists: string;
 	coverUrl: string;
+  playing?: boolean;
 }
 
 export type SongResponse = z.infer<typeof songResponseSchema>;
@@ -25,4 +26,5 @@ export const songResponseSchema = z.object({
 
 export const abstractSongResponseSchema = z.object({
   item: songResponseSchema,
+  is_playing: z.boolean(),
 })

@@ -9,7 +9,7 @@
 	<h1 class="font-mono text-4xl font-bold text-aipink">{$t('music.title')}</h1>
 </div>
 
-{#if data.currentlyPlaying}
+{#if data.currentlyPlaying && data.currentlyPlaying.playing}
 	<div class="mt-8 flex w-full flex-col rounded-sm border-4 border-aipink p-6">
 		<h2 class="mb-12 font-mono text-2xl font-bold text-aipink">{$t('music.playing')}</h2>
 		<div class="flex flex-row items-center justify-around max-[950px]:flex-col">
