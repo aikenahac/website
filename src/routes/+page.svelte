@@ -5,7 +5,6 @@
 	import { faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 	import type { Social } from '$lib/types';
 	import { faLink } from '@fortawesome/free-solid-svg-icons';
-	import type { PageData } from './$types';
 	import moment from 'moment';
 	import l from '$lib/assets/l.gif';
 
@@ -120,8 +119,6 @@
 			url: 'https://ziga.kralj.io/',
 		},
 	];
-
-	let { data }: { data: PageData } = $props();
 </script>
 
 <div class="mt-8 flex w-full flex-row gap-8 max-[1120px]:flex-col max-[860px]:justify-center">

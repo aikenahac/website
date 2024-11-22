@@ -32,3 +32,8 @@ export interface ProjectItem {
   url: string;
   description: string;
 }
+
+export interface HighlightItem {
+  image: string;
+  description: string;
+}

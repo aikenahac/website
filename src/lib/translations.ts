@@ -36,6 +36,14 @@ const config: Config = ({
       ).default,
     },
     {
+      locale: 'sl',
+      key: 'highlights',
+      routes: ['/highlights'], 
+      loader: async () => (
+        await import('./i18n/sl/highlights.json')
+      ).default,
+    },
+    {
       locale: 'en',
       key: 'common',
       loader: async () => (
@@ -64,6 +72,14 @@ const config: Config = ({
       routes: ['/projects'], 
       loader: async () => (
         await import('./i18n/en/projects.json')
+      ).default,
+    },
+    {
+      locale: 'en',
+      key: 'highlights',
+      routes: ['/highlights'], 
+      loader: async () => (
+        await import('./i18n/en/highlights.json')
       ).default,
     },
   ],
