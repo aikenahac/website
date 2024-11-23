@@ -10,7 +10,7 @@ export default {
         aiblack: "#171512",
       },
       animation: {
-        'spin-slow': 'spin 3s linear infinite',
+        'spin-slow': 'spin 5s linear infinite',
       }
     }
   },

@@ -1,5 +1,8 @@
 {
   "title": "Music?",
   "playing": "Currently playing",
-  "next": "Up next"
+  "nothing": "Nothing is playing",
+  "paused": "Paused",
+  "next": "Up next",
+  "nothing_next": "Nothing up next"
 }

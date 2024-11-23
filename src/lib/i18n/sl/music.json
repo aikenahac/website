@@ -1,5 +1,8 @@
 {
   "title": "Muska?",
   "playing": "Trenutno poslušam",
-  "next": "Pol bom pa"
+  "nothing": "Nič ne poslušam zdele",
+  "paused": "Na pavzi",
+  "next": "Pol bom pa",
+  "nothing_next": "Nč ni naprej"
 }
