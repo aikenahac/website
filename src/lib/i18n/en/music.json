@@ -4,5 +4,6 @@
   "nothing": "Nothing is playing",
   "paused": "Paused",
   "next": "Up next",
-  "nothing_next": "Nothing up next"
+  "nothing_next": "Nothing up next",
+  "recently_played": "Recently played"
 }

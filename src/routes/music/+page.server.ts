@@ -4,12 +4,14 @@ import {
 	SPOTIFY_CLIENT_SECRET,
 } from '$env/static/private';
 import { getCurrentlyPlaying } from '$lib/spotify/currently.playing';
+import { getRecentlyPlayed } from '$lib/spotify/recently.played';
 import type { SpotifySong } from '$lib/spotify/types';
 import { getUpNext } from '$lib/spotify/up.next';
 
 interface MusicLoad {
 	currentlyPlaying?: SpotifySong;
 	upNext?: SpotifySong;
+  recentlyPlayed?: SpotifySong[];
 }
 
 export const load = async (): Promise<MusicLoad> => {
@@ -29,9 +31,11 @@ export const load = async (): Promise<MusicLoad> => {
 
   const currentlyPlaying = await getCurrentlyPlaying(access_token);
   const upNext = await getUpNext(access_token);
+  const recentlyPlayed = await getRecentlyPlayed(access_token);
 
 	return {
 		currentlyPlaying,
     upNext,
+    recentlyPlayed,
 	};
 };
