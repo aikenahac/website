@@ -11,8 +11,14 @@
   <h1 class="font-mono text-4xl font-bold text-aipink">{$t('music.title')}</h1>
 </div>
 
-<CurrentlyPlaying currentlyPlaying={data.currentlyPlaying} upNext={data.upNext} />
+{#if data.currentlyPlaying}
+	<CurrentlyPlaying currentlyPlaying={data.currentlyPlaying} upNext={data.upNext} />
+{/if}
 
 {#if data.recentlyPlayed && data.recentlyPlayed.length > 0}
   <RecentlyPlayed recentlyPlayed={data.recentlyPlayed} />
+{/if}
+
+{#if !data.currentlyPlaying}
+	<CurrentlyPlaying currentlyPlaying={data.currentlyPlaying} upNext={data.upNext} />
 {/if}
