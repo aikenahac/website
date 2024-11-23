@@ -3,10 +3,5 @@
 </script>
 
 <div class="flex flex-col items-center justify-center border border-aipink p-6">
-  <img
-    class="rounded-sm h-full w-full object-cover"
-    src={url}
-    loading="lazy"
-    alt="me"
-  />
+  <img class="h-full w-full rounded-sm object-cover" src={url} loading="lazy" alt="me" />
 </div>

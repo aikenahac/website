@@ -3,29 +3,29 @@
 @import 'tailwindcss/utilities';
 
 .vinyl {
-	border-radius: 100%;
-	background: radial-gradient(circle at center, #333 0%, #333 20%, transparent 20.5%),
-		repeating-radial-gradient(circle at center, #222 0px, #222 1px, #161616 2px, #161616 3px),
-		linear-gradient(#1a1a1a, #1a1a1a);
-	box-shadow:
-		0 0 0 1px rgba(255, 255, 255, 0.1),
-		0 5px 15px rgba(0, 0, 0, 0.5);
-	position: relative;
+  border-radius: 100%;
+  background: radial-gradient(circle at center, #333 0%, #333 20%, transparent 20.5%),
+    repeating-radial-gradient(circle at center, #222 0px, #222 1px, #161616 2px, #161616 3px),
+    linear-gradient(#1a1a1a, #1a1a1a);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 5px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .vinyl::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	border-radius: 100%;
-	background: linear-gradient(
-		135deg,
-		rgba(255, 255, 255, 0.1) 0%,
-		transparent 50%,
-		rgba(0, 0, 0, 0.1) 100%
-	);
-	pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  pointer-events: none;
 }

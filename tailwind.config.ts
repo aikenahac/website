@@ -6,14 +6,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        aipink: "#D423C6",
-        aiblack: "#171512",
+        aipink: '#D423C6',
+        aiblack: '#171512',
       },
       animation: {
         'spin-slow': 'spin 5s linear infinite',
-      }
-    }
+      },
+    },
   },
 
-  plugins: []
+  plugins: [],
 } satisfies Config;

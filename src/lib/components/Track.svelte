@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SpotifySong } from "$lib/spotify/types";
+  import type { SpotifySong } from '$lib/spotify/types';
 
   let { track }: { track: SpotifySong } = $props();
 </script>
