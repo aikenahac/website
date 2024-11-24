@@ -1,6 +1,7 @@
 <script lang="ts">
   import CurrentlyPlaying from '$lib/components/CurrentlyPlaying.svelte';
   import RecentlyPlayed from '$lib/components/RecentlyPlayed.svelte';
+    import TopArtists from '$lib/components/TopArtists.svelte';
   import { t } from '$lib/translations';
   import type { PageServerData } from './$types';
 
@@ -17,6 +18,10 @@
 
 {#if data.recentlyPlayed && data.recentlyPlayed.length > 0}
   <RecentlyPlayed recentlyPlayed={data.recentlyPlayed} />
+{/if}
+
+{#if data.topArtists}
+	<TopArtists artists={data.topArtists} />
 {/if}
 
 {#if !data.currentlyPlaying}

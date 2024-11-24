@@ -3,8 +3,10 @@
   import { t } from '$lib/translations';
   import Track from './Track.svelte';
 
-  let { currentlyPlaying, upNext }: { currentlyPlaying?: SpotifySong; upNext?: SpotifySong } =
-    $props();
+  let {
+    currentlyPlaying,
+    upNext,
+  }: { currentlyPlaying: SpotifySong | null; upNext: SpotifySong | null } = $props();
 </script>
 
 <div class="mt-8 flex w-full flex-col rounded-sm border-4 border-aipink p-6">

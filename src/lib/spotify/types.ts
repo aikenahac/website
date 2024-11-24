@@ -28,3 +28,22 @@ export const abstractSongResponseSchema = z.object({
   item: songResponseSchema,
   is_playing: z.boolean(),
 });
+
+export interface SpotifyArtist {
+  name: string;
+  imageUrl: string;
+}
+
+export type ArtistResponse = z.infer<typeof artistResponseSchema>;
+export const artistResponseSchema = z.object({
+  images: z.array(
+    z.object({
+      url: z.string(),
+    }),
+  ),
+  name: z.string(),
+});
+
+export const artistsResponseSchema = z.object({
+  items: z.array(artistResponseSchema),
+});
