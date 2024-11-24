@@ -10,11 +10,7 @@ export async function getCurrentlyPlaying(access_token: string): Promise<Spotify
       },
     });
 
-    if (!res.ok) {
-      return null;
-    }
-
-    if (!res.body) {
+    if (!res.ok || !res.body) {
       return null;
     }
 

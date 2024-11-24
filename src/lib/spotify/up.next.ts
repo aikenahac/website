@@ -10,11 +10,7 @@ export async function getUpNext(access_token: string): Promise<SpotifySong | nul
       },
     });
 
-    if (!res.ok) {
-      return null;
-    }
-
-    if (!res.body) {
+    if (!res.ok || !res.body) {
       return null;
     }
 

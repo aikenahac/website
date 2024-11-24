@@ -11,11 +11,7 @@ export async function getTopArtists(access_token: string): Promise<SpotifyArtist
       },
     });
 
-    if (!res.ok) {
-      throw new Error(`Failed to fetch: ${res.status}`);
-    }
-
-    if (!res.body) {
+    if (!res.ok || !res.body) {
       return null;
     }
 

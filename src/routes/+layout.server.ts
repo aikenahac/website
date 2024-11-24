@@ -1,6 +1,7 @@
 import { locales, loadTranslations, defaultLocale } from '$lib/translations';
+import type { LayoutServerLoadEvent } from './$types';
 
-export const load = async ({ url, cookies, request }) => {
+export const load = async ({ url, cookies, request }: LayoutServerLoadEvent) => {
   const { pathname } = url;
 
   // Try to get the locale from cookie
