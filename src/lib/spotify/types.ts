@@ -51,3 +51,8 @@ export const artistResponseSchema = z.object({
 export const artistsResponseSchema = z.object({
   items: z.array(artistResponseSchema),
 });
+
+export interface SpotifyPlaylist {
+  title: string;
+  url: string;
+}

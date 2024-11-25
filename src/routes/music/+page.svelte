@@ -1,5 +1,6 @@
 <script lang="ts">
   import CurrentlyPlaying from '$lib/components/CurrentlyPlaying.svelte';
+    import Playlists from '$lib/components/Playlists.svelte';
   import RecentlyPlayed from '$lib/components/RecentlyPlayed.svelte';
   import TopArtists from '$lib/components/TopArtists.svelte';
   import { t } from '$lib/translations';
@@ -23,6 +24,8 @@
 {#if data.topArtists}
   <TopArtists artists={data.topArtists} />
 {/if}
+
+<Playlists />
 
 {#if !data.currentlyPlaying}
   <CurrentlyPlaying currentlyPlaying={data.currentlyPlaying} upNext={data.upNext} />
