@@ -4,6 +4,7 @@ export interface SpotifySong {
   title: string;
   artists: string;
   coverUrl: string;
+  url: string;
   playing?: boolean;
 }
 
@@ -22,6 +23,7 @@ export const songResponseSchema = z.object({
     }),
   ),
   name: z.string(),
+  id: z.string(),
 });
 
 export const abstractSongResponseSchema = z.object({
@@ -32,6 +34,7 @@ export const abstractSongResponseSchema = z.object({
 export interface SpotifyArtist {
   name: string;
   imageUrl: string;
+  url: string;
 }
 
 export type ArtistResponse = z.infer<typeof artistResponseSchema>;
@@ -42,6 +45,7 @@ export const artistResponseSchema = z.object({
     }),
   ),
   name: z.string(),
+  id: z.string(),
 });
 
 export const artistsResponseSchema = z.object({

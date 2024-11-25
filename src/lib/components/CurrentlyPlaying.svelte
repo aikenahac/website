@@ -26,9 +26,15 @@
     <div
       class="flex max-w-[45%] flex-col items-center justify-center max-[950px]:mt-8 min-[950px]:ml-8"
     >
-      <p class="text-center font-mono text-4xl font-bold text-aipink">
-        {currentlyPlaying ? currentlyPlaying.title : $t('music.nothing')}
-      </p>
+      {#if currentlyPlaying}
+        <a class="text-center font-mono text-4xl font-bold text-aipink underline" href={currentlyPlaying.url} target="_blank">
+          {currentlyPlaying.title}
+        </a>
+      {:else}
+        <p class="text-center font-mono text-4xl font-bold text-aipink">
+          {$t('music.nothing')}
+        </p>
+      {/if}
       {#if currentlyPlaying}
         <p class="text-center font-mono text-xl text-aipink">{currentlyPlaying.artists}</p>
         {#if !currentlyPlaying.playing}

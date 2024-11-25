@@ -25,6 +25,7 @@ export async function getTopArtists(access_token: string): Promise<SpotifyArtist
     return parsed.data.items.map((artist) => ({
       name: artist.name,
       imageUrl: artist.images[0].url,
+      url: `https://open.spotify.com/artist/${artist.id}`
     }));
   } catch (error) {
     console.error('Error fetching top artists:', error);

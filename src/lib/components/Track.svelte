@@ -13,6 +13,8 @@
     />
     <div class="vinyl h-44 w-44 rounded-full"></div>
   </div>
-  <p class="text-center font-mono font-bold text-aipink">{track.title}</p>
+  <a class="text-center font-mono font-bold text-aipink underline" href={track.url} target="_blank"
+    >{track.title}</a
+  >
   <p class="text-center font-mono text-xs font-bold text-aipink">{track.artists}</p>
 </div>

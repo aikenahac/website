@@ -25,6 +25,7 @@ export async function getCurrentlyPlaying(access_token: string): Promise<Spotify
       title: parsed.data.item.name,
       artists: parsed.data.item.artists.map(({ name }) => name).join(', '),
       coverUrl: parsed.data.item.album.images[0].url,
+      url: `https://open.spotify.com/track/${parsed.data.item.id}`,
       playing: parsed.data.is_playing,
     };
   } catch (error) {

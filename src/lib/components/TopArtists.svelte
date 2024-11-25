@@ -24,7 +24,11 @@
             </div>
           </div>
         </div>
-        <p class="text-center font-mono font-bold text-aipink">{artist.name}</p>
+        <a
+          class="text-center font-mono font-bold text-aipink underline"
+          href={artist.url}
+          target="_blank">{artist.name}</a
+        >
       </div>
     {/each}
   </div>

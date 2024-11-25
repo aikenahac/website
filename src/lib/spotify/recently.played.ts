@@ -30,10 +30,11 @@ export async function getRecentlyPlayed(access_token: string): Promise<SpotifySo
     }
 
     return parsedTracks.map(
-      (track: { name: any; artists: { name: any }[]; album: { images: { url: any }[] } }) => ({
+      (track: SongResponse) => ({
         title: track.name,
         artists: track.artists.map(({ name }) => name).join(', '),
         coverUrl: track.album.images[0].url,
+        url: `https://open.spotify.com/track/${track.id}`,
       }),
     );
   } catch (error) {

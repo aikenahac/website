@@ -31,6 +31,7 @@ export async function getUpNext(access_token: string): Promise<SpotifySong | nul
       title: parsed.data.name,
       artists: parsed.data.artists.map(({ name }) => name).join(', '),
       coverUrl: parsed.data.album.images[0].url,
+      url: `https://open.spotify.com/track/${parsed.data.id}`,
     };
   } catch (error) {
     console.error('Error fetching up next track:', error);
