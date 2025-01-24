@@ -13,8 +13,8 @@
       url: 'https://open.spotify.com/playlist/65d1Cf4dxjgJh0MXPmLh6z?si=179394ab48944784',
     },
     {
-      title: 'nostalgija?',
-      url: 'https://open.spotify.com/playlist/3wikO2IBeamsBtcnD11M3H?si=2aebb6b0f0aa4805',
+      title: 'nerdy white guys who cant rly sing',
+      url: 'https://open.spotify.com/playlist/6NhU3Oml2JhH3eBRbcfjEF?si=sDrjyLYPROG3Y4zTn2YijA&pi=e-rJ7BcNmfSD2O',
     },
     {
       title: 'tema',
