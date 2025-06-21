@@ -15,10 +15,18 @@
       description3: $t('work.aerio.description3'),
     },
     {
+      title: $t('work.preskok.title'),
+      location: $t('work.preskok.location'),
+      start: 'Jun 2025',
+      end: $t('work.current'),
+      url: 'https://preskok.si',
+      description: $t('work.preskok.description'),
+    },
+    {
       title: $t('work.easistent.title'),
       location: $t('work.easistent.location'),
       start: 'Mar 2022',
-      end: $t('work.current'),
+      end: 'Jun 2025',
       url: 'https://www.easistent.com',
       description: $t('work.easistent.description'),
       description2: $t('work.easistent.description2'),
@@ -80,7 +88,8 @@
 
 <div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
   <h1 class="font-mono text-4xl font-bold text-aipink">
-    {$t('work.title')} [ <a class="underline" href="/cv.pdf" target="_blank">CV</a> ]
+    {$t('work.title')}
+    <!-- [ <a class="underline" href="/cv.pdf" target="_blank">CV</a> ] -->
   </h1>
 </div>
 
