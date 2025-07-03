@@ -43,7 +43,7 @@
     {
       key: '$work$',
       content:
-        "<a class='text-aipink font-mono underline' href='https://www.easistent.com' target='_blank'>eAsistent</a>",
+        "<a class='text-aipink font-mono underline' href='https://preskok.si/sl/' target='_blank'>Preskok</a>",
     },
     {
       key: '$aer$',
