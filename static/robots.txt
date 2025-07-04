@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /work/
+Disallow: /projects/
+Disallow: /highlights/
+Disallow: /music/
