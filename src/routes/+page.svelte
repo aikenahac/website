@@ -27,7 +27,7 @@
     },
     {
       icon: faLink,
-      link: 'https://me.aikenahac.com/',
+      link: 'https://links.aiken.si/',
     },
   ];
 
@@ -62,16 +62,16 @@
   }
 
   const gear = [
-    'MacBook Pro M1 Pro 14"',
+    'MacBook Pro M1 Pro 14" / M1 Max 16"',
     'Logitech MX Master 3',
     'Logitech MX Mechanical Mini',
     'LG Ultrawide 27"',
     'ThinkVision E24 23,8"',
   ];
   const tech = [
-    'SvelteKit',
-    'Flutter',
-    'NestJS',
+    'SvelteKit / NextJS',
+    'Flutter / React Native',
+    'NestJS / PayloadCMS',
     'PrismaORM',
     'PostgreSQL',
     'Dart, TypeScript, PHP, Python',
@@ -84,7 +84,7 @@
     },
     {
       name: 'Anton Luka Šijanec',
-      url: 'https://šijanec.eu/',
+      url: 'https://splet.4a.si./index.shtml?r=aiken.si',
     },
     {
       name: 'David Studen',
