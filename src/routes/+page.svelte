@@ -62,7 +62,7 @@
   }
 
   const gear = [
-    'MacBook Pro M1 Pro 14" / M1 Max 16"',
+    'MacBook Pro M1 Max 16"',
     'Logitech MX Master 3',
     'Logitech MX Mechanical Mini',
     'LG Ultrawide 27"',
