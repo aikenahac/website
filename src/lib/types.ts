@@ -20,6 +20,7 @@ export interface JobItem {
   description2?: string;
   description3?: string;
   description4?: string;
+  description5?: string;
   item?: string;
   item2?: string;
   item3?: string;
