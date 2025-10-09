@@ -32,7 +32,7 @@
       description2: $t('work.easistent.description2'),
       description3: $t('work.easistent.description3'),
       description4: $t('work.easistent.description4'),
-      description5: $t('work.easistent.description45'),
+      description5: $t('work.easistent.description5'),
     },
     {
       title: $t('work.fri.title'),
