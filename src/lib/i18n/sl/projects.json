@@ -23,5 +23,9 @@
   "imageproc": {
     "title": "Web image processor",
     "description": "Preprosta spletna aplikacija za urejanje slike."
+  },
+  "mwh": {
+    "title": "Mess With Humanity",
+    "description": "Create custom Cards Against Humanity decks online for free. Design white answer cards and black question cards, print professional PDFs, and play with friends."
   }
 }
