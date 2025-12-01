@@ -17,8 +17,8 @@
       url: 'https://open.spotify.com/playlist/6NhU3Oml2JhH3eBRbcfjEF?si=sDrjyLYPROG3Y4zTn2YijA&pi=e-rJ7BcNmfSD2O',
     },
     {
-      title: 'tema',
-      url: 'https://open.spotify.com/playlist/4fEXZy9gI0eL546Cpgl4oi?si=b85c292aad47487d',
+      title: 'the dogma',
+      url: 'https://open.spotify.com/playlist/4FQCruv42l6zCvzy6wGEJr?si=b32c0fcd53c249ec',
     },
   ];
 </script>

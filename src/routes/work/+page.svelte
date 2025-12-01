@@ -15,6 +15,14 @@
       description3: $t('work.aerio.description3'),
     },
     {
+      title: $t('work.prskalnik.title'),
+      location: $t('work.prskalnik.location'),
+      start: 'Oct 2024',
+      end: $t('work.current'),
+      url: 'https://prskalnik.eu',
+      description: $t('work.prskalnik.description'),
+    },
+    {
       title: $t('work.preskok.title'),
       location: $t('work.preskok.location'),
       start: 'Jun 2025',

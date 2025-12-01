@@ -1,5 +1,5 @@
 <script lang="ts">
-  import me from '$lib/assets/me.jpeg';
+  import me from '$lib/assets/me.jpg';
   import { t } from '$lib/translations';
   import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
   import { faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -43,12 +43,17 @@
     {
       key: '$work$',
       content:
-        "<a class='text-aipink font-mono underline' href='https://preskok.si/sl/' target='_blank'>Preskok</a>",
+        "<a class='text-[#DF3B3B] font-mono underline' href='https://preskok.si/sl/' target='_blank'>Preskok</a>",
     },
     {
       key: '$aer$',
       content:
         "<a class='text-aipink font-mono underline' href='https://aerio.tech' target='_blank'>Aerio</a>",
+    },
+    {
+      key: '$prs$',
+      content:
+        "<a class='text-[#6dc1c5] font-mono underline' href='https://prskalnik.eu' target='_blank'>Prskalnik</a>",
     },
   ];
 

@@ -3,7 +3,7 @@
 
   "about_me": {
     "title": "About me",
-    "intro": "Hello there! I'm Aiken, a $age$-year-old software developer from Slovenia, currently living in the beautiful old Ljubljana city center. I've been working with startups for $yrs$+ years. I'm currently employed at $work$ and am a Co-Founder of $aer$."
+    "intro": "Hello there! I'm Aiken, a $age$-year-old software developer from Slovenia, currently living in the beautiful old Ljubljana city center. I've been working with startups for $yrs$+ years. I'm currently employed at $work$ and am a Co-Founder of $aer$ and  $prs$."
   },
   "gear": "My Gear",
   "tech": "Personal Stack",
