@@ -6,7 +6,7 @@
   const projects: ProjectItem[] = [
     {
       title: $t('projects.echo.title'),
-      url: 'https://echo.aiken.si',
+      url: 'https://echobook.club/en',
       description: $t('projects.echo.description'),
     },
     {
