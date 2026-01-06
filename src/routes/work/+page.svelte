@@ -91,6 +91,11 @@
       url: 'https://www.linkedin.com/company/yourflare',
       description: $t('work.flare.description'),
       description2: $t('work.flare.description2'),
+      description3: [
+        '<a class="font-mono text-sm text-aipink underline" href="https://www.dnevnik.si/novice/posel/mladi-podjetnik-s-pametno-kresnicko-flare-ki-belezi-lokacijo-otroka-2206031/" target="_blank">[1]</a>',
+        '<a class="font-mono text-sm text-aipink underline" href="https://mestoakrobatov.si/zgodbe-akrobatov/andrei-morozov-flare/" target="_blank">[2]</a>',
+        '<a class="font-mono text-sm text-aipink underline" href="https://www.bibaleze.si/novice/pametna-kresnicka-za-vecjo-varnost-otrok.html" target="_blank">[3]</a>',
+      ],
     },
   ];
 </script>

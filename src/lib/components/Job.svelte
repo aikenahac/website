@@ -16,8 +16,15 @@
   {#if job.description2}
     <p class="font-mono text-sm text-aipink">{job.description2}</p>
   {/if}
-  {#if job.description3}
+  {#if job.description3 && Array.isArray(job.description3) === false}
     <p class="font-mono text-sm text-aipink">{job.description3}</p>
+  {/if}
+  {#if job.description3 && Array.isArray(job.description3)}
+    <div class="flex flex-row gap-2">
+      {#each job.description3 as desc}
+        {@html desc}
+      {/each}
+    </div>
   {/if}
   {#if job.description4}
     <p class="font-mono text-sm text-aipink">{job.description4}</p>
