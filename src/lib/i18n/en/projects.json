@@ -31,5 +31,9 @@
   "echo": {
     "title": "Echo",
     "description": "Track your reading journey, discover new books, and connect with fellow readers."
+  },
+  "mapcn-rn": {
+    "title": "mapcn-react-native",
+    "description": "Beautiful, ready to use, and customizable map components built on MapLibre. Styled with Nativewind. Zero config. One command setup."
   }
 }

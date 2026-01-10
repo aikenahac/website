@@ -5,6 +5,11 @@
 
   const projects: ProjectItem[] = [
     {
+      title: $t('projects.mapcn-rn.title'),
+      url: 'https://mapcn-rn.aiken.si',
+      description: $t('projects.mapcn-rn.description'),
+    },
+    {
       title: $t('projects.echo.title'),
       url: 'https://echobook.club/en',
       description: $t('projects.echo.description'),
