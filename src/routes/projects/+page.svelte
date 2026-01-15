@@ -6,7 +6,7 @@
   const projects: ProjectItem[] = [
     {
       title: $t('projects.mapcn-rn.title'),
-      url: 'https://mapcn-rn.aiken.si',
+      url: 'https://mapcn-rn.dev',
       description: $t('projects.mapcn-rn.description'),
     },
     {
