@@ -14,8 +14,8 @@
   <div
     class="mt-8 grid grid-cols-4 gap-8 max-[1000px]:grid-cols-3 max-[700px]:grid-cols-2 max-[540px]:grid-cols-1"
   >
-    {#each data.items as url}
-      <Highlight {url} />
+    {#each data.items as item}
+      <Highlight url={item.url} caption={item.caption} />
     {/each}
   </div>
 {:else}
