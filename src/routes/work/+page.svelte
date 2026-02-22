@@ -103,7 +103,7 @@
 <div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
   <h1 class="font-mono text-4xl font-bold text-aipink">
     {$t('work.title')}
-    <!-- [ <a class="underline" href="/cv.pdf" target="_blank">CV</a> ] -->
+    [ <a class="underline" href="/cv.pdf" target="_blank">CV</a> ]
   </h1>
 </div>
 
