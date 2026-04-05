@@ -70,14 +70,14 @@
     'MacBook Pro M1 Max 16"',
     'Logitech MX Master 3',
     'Logitech MX Mechanical Mini',
-    'LG Ultrawide 27"',
-    'ThinkVision E24 23,8"',
+    'Xiaomi G34WQi 34"',
   ];
   const tech = [
     'SvelteKit / NextJS',
     'Flutter / React Native',
     'NestJS / PayloadCMS',
-    'PrismaORM',
+    'Clerk',
+    'Drizzle ORM',
     'PostgreSQL',
     'Dart, TypeScript, PHP, Python',
   ];
