@@ -29,6 +29,13 @@
       end: $t('work.current'),
       url: 'https://preskok.si',
       description: $t('work.preskok.description'),
+      item: $t('work.preskok.item'),
+      subitem11: $t('work.preskok.subitem1-1'),
+      subitem12: $t('work.preskok.subitem1-2'),
+      subitem13: $t('work.preskok.subitem1-3'),
+      item2: $t('work.preskok.item2'),
+      subitem21: $t('work.preskok.subitem2-1'),
+      subitem22: $t('work.preskok.subitem2-2'),
     },
     {
       title: $t('work.easistent.title'),

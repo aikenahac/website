@@ -22,7 +22,12 @@ export interface JobItem {
   description4?: string;
   description5?: string;
   item?: string;
+  subitem11?: string;
+  subitem12?: string;
+  subitem13?: string;
   item2?: string;
+  subitem21?: string;
+  subitem22?: string;
   item3?: string;
   item4?: string;
   item5?: string;

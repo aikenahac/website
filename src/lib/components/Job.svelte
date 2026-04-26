@@ -32,13 +32,32 @@
   {#if job.description5}
     <p class="font-mono text-sm text-aipink">{job.description5}</p>
   {/if}
-  {#if job.item}
+  {#if job.item && !job.subitem11}
     <ul class="list-['♱']">
       <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.item}</li>
       <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.item2}</li>
       <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.item3}</li>
       <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.item4}</li>
       <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.item5}</li>
+    </ul>
+  {/if}
+  {#if job.subitem11}
+    <ul class="list-['♱']">
+      <li class="ml-4 pl-2 font-mono text-sm text-aipink">
+        {job.item}
+        <ul class="list-['♱']">
+          <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.subitem11}</li>
+          <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.subitem12}</li>
+          <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.subitem13}</li>
+        </ul>
+      </li>
+      <li class="ml-4 pl-2 font-mono text-sm text-aipink">
+        {job.item2}
+        <ul class="list-['♱']">
+          <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.subitem21}</li>
+          <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.subitem22}</li>
+        </ul>
+      </li>
     </ul>
   {/if}
 </div>

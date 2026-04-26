@@ -16,7 +16,14 @@
   "preskok": {
     "title": "Senior Software Developer @ Preskok d.o.o.",
     "location": "Ljubljana, Slovenia",
-    "description": "At Preskok I play a large role in developing the mobile app for taking and processing commercial images for cars - available under AutoBrief Companion in the Apple App Store/Google Play, as well as some internal software."
+    "description": "At Preskok I play a large role in developing the mobile app for taking and processing commercial images for cars - available under AutoBrief Companion in the Apple App Store/Google Play, as well as some internal software.",
+    "item": "develop commercial photos app (React Native)",
+    "subitem1-1": "guided capture of vehicles",
+    "subitem1-2": "complex upload queue",
+    "subitem1-3": "offline mode",
+    "item2": "develop internal B2B software (React)",
+    "subitem2-1": "sped up production builds by 90% in my first 2 weeks",
+    "subitem2-2": "complex web-based views handling 1000+ vehicles with 100s of properties"
   },
   "easistent": {
     "title": "Software Developer @ eAsistent eŠola d.o.o.",
