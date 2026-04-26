@@ -10,27 +10,32 @@ export interface Social {
   link: string;
 }
 
+export interface JobBulletItem {
+  text: string;
+  children?: JobBulletItem[];
+}
+
+export interface JobReference {
+  label: string;
+  url: string;
+}
+
+export interface WorkJobContent {
+  title: string;
+  location: string;
+  paragraphs: string[];
+  bullets?: JobBulletItem[];
+}
+
 export interface JobItem {
   title: string;
   location: string;
   start: string;
   end: string;
   url: string;
-  description: string;
-  description2?: string;
-  description3?: string;
-  description4?: string;
-  description5?: string;
-  item?: string;
-  subitem11?: string;
-  subitem12?: string;
-  subitem13?: string;
-  item2?: string;
-  subitem21?: string;
-  subitem22?: string;
-  item3?: string;
-  item4?: string;
-  item5?: string;
+  paragraphs: string[];
+  bullets?: JobBulletItem[];
+  references?: JobReference[];
 }
 
 export interface ProjectItem {

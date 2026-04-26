@@ -3,6 +3,7 @@ import i18n, { type Config } from 'sveltekit-i18n';
 export const defaultLocale = 'sl';
 
 const config: Config = {
+  preprocess: 'preserveArrays',
   loaders: [
     {
       locale: 'sl',

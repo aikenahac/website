@@ -1,110 +1,27 @@
 <script lang="ts">
   import Job from '$lib/components/Job.svelte';
   import { t } from '$lib/translations';
-  import type { JobItem } from '$lib/types';
+  import type { JobBulletItem, JobItem } from '$lib/types';
+  import { workJobs } from '$lib/work';
 
-  const positions: JobItem[] = [
-    {
-      title: $t('work.aerio.title'),
-      location: $t('work.aerio.location'),
-      start: 'Feb 2021',
-      end: $t('work.current'),
-      url: 'https://aerio.tech',
-      description: $t('work.aerio.description'),
-      description2: $t('work.aerio.description2'),
-      description3: $t('work.aerio.description3'),
-    },
-    {
-      title: $t('work.prskalnik.title'),
-      location: $t('work.prskalnik.location'),
-      start: 'Oct 2024',
-      end: $t('work.current'),
-      url: 'https://prskalnik.eu',
-      description: $t('work.prskalnik.description'),
-    },
-    {
-      title: $t('work.preskok.title'),
-      location: $t('work.preskok.location'),
-      start: 'Jun 2025',
-      end: $t('work.current'),
-      url: 'https://preskok.si',
-      description: $t('work.preskok.description'),
-      item: $t('work.preskok.item'),
-      subitem11: $t('work.preskok.subitem1-1'),
-      subitem12: $t('work.preskok.subitem1-2'),
-      subitem13: $t('work.preskok.subitem1-3'),
-      item2: $t('work.preskok.item2'),
-      subitem21: $t('work.preskok.subitem2-1'),
-      subitem22: $t('work.preskok.subitem2-2'),
-    },
-    {
-      title: $t('work.easistent.title'),
-      location: $t('work.easistent.location'),
-      start: 'Mar 2022',
-      end: 'Jun 2025',
-      url: 'https://www.easistent.com',
-      description: $t('work.easistent.description'),
-      description2: $t('work.easistent.description2'),
-      description3: $t('work.easistent.description3'),
-      description4: $t('work.easistent.description4'),
-      description5: $t('work.easistent.description5'),
-    },
-    {
-      title: $t('work.fri.title'),
-      location: $t('work.fri.location'),
-      start: 'Nov 2023',
-      end: 'Apr 2024',
-      url: 'https://fri.uni-lj.si',
-      description: $t('work.fri.description'),
-    },
-    {
-      title: $t('work.vegova.title'),
-      location: $t('work.vegova.location'),
-      start: 'Aug 2023',
-      end: 'Jan 2024',
-      url: 'https://www.vegova.si',
-      description: $t('work.vegova.description'),
-      item: $t('work.vegova.item'),
-      item2: $t('work.vegova.item2'),
-      item3: $t('work.vegova.item3'),
-      item4: $t('work.vegova.item4'),
-      item5: $t('work.vegova.item5'),
-    },
-    {
-      title: $t('work.identisoft.title'),
-      location: $t('work.identisoft.location'),
-      start: 'Jun 2022',
-      end: 'Jun 2022',
-      url: 'https://www.identisoft.eu/',
-      description: $t('work.identisoft.description'),
-      description2: $t('work.identisoft.description2'),
-      description3: $t('work.identisoft.description3'),
-      description4: $t('work.identisoft.description4'),
-    },
-    {
-      title: $t('work.fundl.title'),
-      location: $t('work.fundl.location'),
-      start: 'May 2021',
-      end: 'Nov 2021',
-      url: 'https://github.com/aeriotech/onedl',
-      description: $t('work.fundl.description'),
-      description2: $t('work.fundl.description2'),
-    },
-    {
-      title: $t('work.flare.title'),
-      location: $t('work.flare.location'),
-      start: 'Jun 2019',
-      end: 'Aug 2021',
-      url: 'https://www.linkedin.com/company/yourflare',
-      description: $t('work.flare.description'),
-      description2: $t('work.flare.description2'),
-      description3: [
-        '<a class="font-mono text-sm text-aipink underline" href="https://www.dnevnik.si/novice/posel/mladi-podjetnik-s-pametno-kresnicko-flare-ki-belezi-lokacijo-otroka-2206031/" target="_blank">[1]</a>',
-        '<a class="font-mono text-sm text-aipink underline" href="https://mestoakrobatov.si/zgodbe-akrobatov/andrei-morozov-flare/" target="_blank">[2]</a>',
-        '<a class="font-mono text-sm text-aipink underline" href="https://www.bibaleze.si/novice/pametna-kresnicka-za-vecjo-varnost-otrok.html" target="_blank">[3]</a>',
-      ],
-    },
-  ];
+  const getTranslationArray = <T,>(key: string): T[] => {
+    const value = $t(key);
+
+    return Array.isArray(value) ? (value as T[]) : [];
+  };
+
+  const positions: JobItem[] = $derived(
+    workJobs.map((job) => ({
+      title: $t(`work.jobs.${job.id}.title`),
+      location: $t(`work.jobs.${job.id}.location`),
+      start: job.start,
+      end: job.current ? $t('work.current') : (job.end ?? ''),
+      url: job.url,
+      paragraphs: getTranslationArray<string>(`work.jobs.${job.id}.paragraphs`),
+      bullets: getTranslationArray<JobBulletItem>(`work.jobs.${job.id}.bullets`),
+      references: job.references,
+    })),
+  );
 </script>
 
 <div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">

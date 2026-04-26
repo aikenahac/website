@@ -1,8 +1,21 @@
 <script lang="ts">
-  import type { JobItem } from '$lib/types';
+  import type { JobBulletItem, JobItem } from '$lib/types';
 
   let { job }: { job: JobItem } = $props();
 </script>
+
+{#snippet bullets(items: JobBulletItem[])}
+  <ul class="list-['♱']">
+    {#each items as item}
+      <li class="ml-4 pl-2 font-mono text-sm text-aipink">
+        {item.text}
+        {#if item.children?.length}
+          {@render bullets(item.children)}
+        {/if}
+      </li>
+    {/each}
+  </ul>
+{/snippet}
 
 <div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
   <div>
@@ -12,52 +25,19 @@
     <p class="font-mono text-aipink">{job.start} - {job.end}</p>
     <p class="font-mono text-sm text-aipink">{job.location}</p>
   </div>
-  <p class="font-mono text-sm text-aipink">{job.description}</p>
-  {#if job.description2}
-    <p class="font-mono text-sm text-aipink">{job.description2}</p>
-  {/if}
-  {#if job.description3 && Array.isArray(job.description3) === false}
-    <p class="font-mono text-sm text-aipink">{job.description3}</p>
-  {/if}
-  {#if job.description3 && Array.isArray(job.description3)}
+  {#each job.paragraphs as paragraph}
+    <p class="font-mono text-sm text-aipink">{paragraph}</p>
+  {/each}
+  {#if job.references?.length}
     <div class="flex flex-row gap-2">
-      {#each job.description3 as desc}
-        {@html desc}
+      {#each job.references as reference}
+        <a class="font-mono text-sm text-aipink underline" href={reference.url} target="_blank"
+          >{reference.label}</a
+        >
       {/each}
     </div>
   {/if}
-  {#if job.description4}
-    <p class="font-mono text-sm text-aipink">{job.description4}</p>
-  {/if}
-  {#if job.description5}
-    <p class="font-mono text-sm text-aipink">{job.description5}</p>
-  {/if}
-  {#if job.item && !job.subitem11}
-    <ul class="list-['♱']">
-      <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.item}</li>
-      <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.item2}</li>
-      <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.item3}</li>
-      <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.item4}</li>
-      <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.item5}</li>
-    </ul>
-  {/if}
-  {#if job.subitem11}
-    <ul class="list-['♱']">
-      <li class="ml-4 pl-2 font-mono text-sm text-aipink">
-        {job.item}
-        <ul class="list-['♱']">
-          <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.subitem11}</li>
-          <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.subitem12}</li>
-          <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.subitem13}</li>
-        </ul>
-      </li>
-      <li class="ml-4 pl-2 font-mono text-sm text-aipink">
-        {job.item2}
-        <ul class="list-['♱']">
-          <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.subitem21}</li>
-          <li class="ml-4 pl-2 font-mono text-sm text-aipink">{job.subitem22}</li>
-        </ul>
-      </li>
-    </ul>
+  {#if job.bullets?.length}
+    {@render bullets(job.bullets)}
   {/if}
 </div>
