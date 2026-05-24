@@ -34,12 +34,13 @@
     rel="noopener noreferrer"
     class="mb-4 flex w-full flex-row items-center gap-3 rounded-sm border border-aipink px-4 py-2 transition-all duration-200 hover:opacity-80"
   >
-    <img src={song.coverUrl} alt={song.title} class="h-8 w-8 rounded-sm object-cover" />
+    <img src={song.coverUrl} alt={song.title} class="h-8 w-8 flex-shrink-0 rounded-sm object-cover" />
     <span class="font-mono text-sm text-aipink">♫</span>
-    <span class="font-mono text-sm font-bold text-aipink">{song.title}</span>
-    <span class="font-mono text-sm text-aipink">—</span>
-    <span class="font-mono text-sm text-aipink">{song.artists}</span>
-    <div class="ml-auto flex items-end gap-[3px]">
+    <div class="flex min-w-0 flex-col">
+      <span class="font-mono text-sm font-bold text-aipink">{song.title}</span>
+      <span class="font-mono text-xs text-aipink opacity-80">{song.artists}</span>
+    </div>
+    <div class="ml-auto flex flex-shrink-0 items-end gap-[3px]">
       <span class="bar"></span>
       <span class="bar" style="animation-delay: 0.2s"></span>
       <span class="bar" style="animation-delay: 0.4s"></span>
