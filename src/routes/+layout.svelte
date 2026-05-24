@@ -1,5 +1,6 @@
 <script lang="ts">
   import Nav from '$lib/components/Nav.svelte';
+  import NowPlayingWidget from '$lib/components/NowPlayingWidget.svelte';
   import { t } from '$lib/translations';
   import '../app.css';
 
@@ -11,6 +12,7 @@
 </svelte:head>
 
 <main class="max-w-screen flex min-h-screen flex-col items-center bg-aiblack p-12 max-[860px]:p-6">
+  <NowPlayingWidget />
   <Nav />
   {@render children()}
   <div
