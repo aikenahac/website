@@ -92,10 +92,6 @@
       url: 'https://splet.4a.si./index.shtml?r=aiken.si',
     },
     {
-      name: 'David Studen',
-      url: 'https://studen.me/',
-    },
-    {
       name: 'Gašper Dobrovoljc',
       url: 'https://gapi.me/',
     },
@@ -118,6 +114,10 @@
     {
       name: 'Tim Hrovat',
       url: 'https://timhrovat.com/',
+    },
+    {
+      name: 'Tim Rekelj',
+      url: 'https://timrekelj.si/',
     },
     {
       name: 'Žiga Kralj',
