@@ -12,10 +12,12 @@
 
 {#if data.items.length > 0}
   <div
-    class="mt-8 grid grid-cols-4 gap-8 max-[1000px]:grid-cols-3 max-[700px]:grid-cols-2 max-[540px]:grid-cols-1"
+    class="mt-8 columns-4 gap-8 max-[1000px]:columns-3 max-[700px]:columns-2 max-[540px]:columns-1"
   >
     {#each data.items as item}
-      <Highlight url={item.url} caption={item.caption} />
+      <div class="mb-8 break-inside-avoid">
+        <Highlight url={item.url} caption={item.caption} width={item.width} height={item.height} />
+      </div>
     {/each}
   </div>
 {:else}
