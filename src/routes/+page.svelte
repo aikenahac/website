@@ -6,7 +6,9 @@
   import type { Social } from '$lib/types';
   import { faLink } from '@fortawesome/free-solid-svg-icons';
   import moment from 'moment';
-  import l from '$lib/assets/l.gif';
+  import Hero from '$lib/components/Hero.svelte';
+  import { reveal } from '$lib/actions/reveal';
+  import { magnetic } from '$lib/actions/magnetic';
 
   const socials: Social[] = [
     {
@@ -43,17 +45,17 @@
     {
       key: '$work$',
       content:
-        "<a class='text-[#DF3B3B] font-mono underline' href='https://preskok.si/sl/' target='_blank'>Preskok</a>",
+        "<a class='text-[#DF3B3B] font-mono underline' href='https://preskok.si/sl/' target='_blank' data-cursor='open'>Preskok</a>",
     },
     {
       key: '$aer$',
       content:
-        "<a class='text-aipink font-mono underline' href='https://aerio.tech' target='_blank'>Aerio</a>",
+        "<a class='text-aipink font-mono underline' href='https://aerio.tech' target='_blank' data-cursor='open'>Aerio</a>",
     },
     {
       key: '$prs$',
       content:
-        "<a class='text-[#6dc1c5] font-mono underline' href='https://prskalnik.eu' target='_blank'>Prskalnik</a>",
+        "<a class='text-[#6dc1c5] font-mono underline' href='https://prskalnik.eu' target='_blank' data-cursor='open'>Prskalnik</a>",
     },
   ];
 
@@ -83,109 +85,88 @@
   ];
 
   const friends: { name: string; url: string }[] = [
-    {
-      name: 'Adrian Sebastian Šiška',
-      url: 'https://ass.si/',
-    },
-    {
-      name: 'Anton Luka Šijanec',
-      url: 'https://splet.4a.si./index.shtml?r=aiken.si',
-    },
-    {
-      name: 'Gašper Dobrovoljc',
-      url: 'https://gapi.me/',
-    },
-    {
-      name: 'Jurij Fortuna',
-      url: 'https://fortuna.wf/',
-    },
-    {
-      name: 'Lovro Govekar',
-      url: 'https://govekar.net/',
-    },
-    {
-      name: 'Matic Babnik',
-      url: 'https://babnik.io/',
-    },
-    {
-      name: 'Sven Ahac',
-      url: 'https://svenahac.com/',
-    },
-    {
-      name: 'Tim Hrovat',
-      url: 'https://timhrovat.com/',
-    },
-    {
-      name: 'Tim Rekelj',
-      url: 'https://timrekelj.si/',
-    },
-    {
-      name: 'Žiga Kralj',
-      url: 'https://ziga.kralj.io/',
-    },
+    { name: 'Adrian Sebastian Šiška', url: 'https://ass.si/' },
+    { name: 'Anton Luka Šijanec', url: 'https://splet.4a.si./index.shtml?r=aiken.si' },
+    { name: 'Gašper Dobrovoljc', url: 'https://gapi.me/' },
+    { name: 'Jurij Fortuna', url: 'https://fortuna.wf/' },
+    { name: 'Lovro Govekar', url: 'https://govekar.net/' },
+    { name: 'Matic Babnik', url: 'https://babnik.io/' },
+    { name: 'Sven Ahac', url: 'https://svenahac.com/' },
+    { name: 'Tim Hrovat', url: 'https://timhrovat.com/' },
+    { name: 'Tim Rekelj', url: 'https://timrekelj.si/' },
+    { name: 'Žiga Kralj', url: 'https://ziga.kralj.io/' },
   ];
 </script>
 
-<div class="mt-8 flex w-full flex-row gap-8 max-[1120px]:flex-col max-[860px]:justify-center">
+<Hero />
+
+<div class="grid w-full grid-cols-1 gap-6 md:grid-cols-3">
+  <!-- About -->
   <div
-    class="flex w-full flex-row items-center justify-between rounded-sm border border-aipink p-8 max-[860px]:flex-col max-[860px]:justify-center"
+    use:reveal
+    class="card flex flex-col gap-6 rounded-sm border border-aipink p-8 md:col-span-2"
   >
-    <img class="mr-4 w-[50%] rounded-sm max-[860px]:mb-4" src={me} alt={$t('home.me_img_alt')} />
-    <div class="flex flex-col items-center justify-start">
-      <h1 class="text-center font-mono text-4xl font-bold text-aipink">Aiken Tine Ahac</h1>
-      <p class="text-center font-mono text-xl text-aipink">Full-Stack Developer</p>
-      <div class="mt-6 flex flex-row gap-2 text-lg">
-        {#each socials as social}
-          <a href={social.link} target="_blank">
-            <FontAwesomeIcon
-              class="text-aipink transition-all duration-200 hover:scale-110"
-              icon={social.icon}
-            />
-          </a>
-        {/each}
+    <div class="flex flex-row gap-6 max-[860px]:flex-col">
+      <img
+        class="w-1/3 self-start rounded-sm max-[860px]:w-full"
+        src={me}
+        alt={$t('home.me_img_alt')}
+      />
+      <div class="flex flex-1 flex-col">
+        <h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.about_me.title')}</h2>
+        <p class="mt-4 font-mono text-aipink">{@html getAboutMe()}</p>
+        <div class="mt-6 flex flex-row gap-4 text-2xl">
+          {#each socials as social}
+            <a href={social.link} target="_blank" data-cursor="open" use:magnetic>
+              <FontAwesomeIcon
+                class="text-aipink transition-colors hover:text-white"
+                icon={social.icon}
+              />
+            </a>
+          {/each}
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Gear -->
   <div
-    class="flex w-full flex-col items-center justify-center gap-2 rounded-sm border border-aipink p-6"
+    use:reveal={{ delay: 80 }}
+    class="card flex flex-col gap-4 rounded-sm border border-aipink p-6"
   >
-    <img class="w-full rounded-sm" src={l} alt="L" />
+    <h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.gear')}</h2>
+    <ul class="list-['♱']">
+      {#each gear as item}
+        <li class="ml-6 pl-2 font-mono text-aipink">{item}</li>
+      {/each}
+    </ul>
   </div>
-</div>
 
-<div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
-  <h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.about_me.title')}</h2>
-  <p class="font-mono text-aipink">
-    {@html getAboutMe()}
-  </p>
-</div>
+  <!-- Tech -->
+  <div
+    use:reveal={{ delay: 80 }}
+    class="card flex flex-col gap-4 rounded-sm border border-aipink p-6"
+  >
+    <h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.tech')}</h2>
+    <ul class="list-['♱']">
+      {#each tech as item}
+        <li class="ml-6 pl-2 font-mono text-aipink">{item}</li>
+      {/each}
+    </ul>
+  </div>
 
-<div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
-  <h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.gear')}</h2>
-  <ul class="list-['♱']">
-    {#each gear as item}
-      <li class="ml-6 pl-2 font-mono text-aipink">{item}</li>
-    {/each}
-  </ul>
-</div>
-
-<div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
-  <h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.tech')}</h2>
-  <ul class="list-['♱']">
-    {#each tech as item}
-      <li class="ml-6 pl-2 font-mono text-aipink">{item}</li>
-    {/each}
-  </ul>
-</div>
-
-<div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
-  <h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.net_friends')}</h2>
-  <ul class="list-['♱']">
-    {#each friends as { name, url }}
-      <li class="ml-6 pl-2 font-mono text-aipink underline">
-        <a href={url} target="_blank">{name}</a>
-      </li>
-    {/each}
-  </ul>
+  <!-- Friends -->
+  <div
+    use:reveal={{ delay: 160 }}
+    class="card flex flex-col gap-4 rounded-sm border border-aipink p-6 md:col-span-2"
+  >
+    <h2 class="font-mono text-2xl font-bold text-aipink">{$t('home.net_friends')}</h2>
+    <ul class="grid grid-cols-1 gap-x-8 sm:grid-cols-2">
+      {#each friends as { name, url }}
+        <li class="font-mono text-aipink underline">
+          <a href={url} target="_blank" data-cursor="open">♱ {name}</a>
+        </li>
+      {/each}
+    </ul>
+  </div>
 </div>

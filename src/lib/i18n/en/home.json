@@ -1,6 +1,20 @@
 {
   "me_img_alt": "Picture of me",
 
+  "hero": {
+    "role": "Full-Stack Developer",
+    "scroll": "scroll",
+    "marquee": [
+      "honest software",
+      "ljubljana based",
+      "open source",
+      "react / next",
+      "typescript",
+      "react native + expo",
+      "full-stack developer"
+    ]
+  },
+
   "about_me": {
     "title": "About me",
     "intro": "Hello there! I'm Aiken, a $age$-year-old software developer from Slovenia, currently living in the beautiful old Ljubljana city center. I've been working with startups for $yrs$+ years. I'm currently employed at $work$ and am a Co-Founder of $aer$ and  $prs$."

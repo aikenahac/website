@@ -29,14 +29,12 @@ export async function getRecentlyPlayed(access_token: string): Promise<SpotifySo
       return null;
     }
 
-    return parsedTracks.map(
-      (track: SongResponse) => ({
-        title: track.name,
-        artists: track.artists.map(({ name }) => name).join(', '),
-        coverUrl: track.album.images[0].url,
-        url: `https://open.spotify.com/track/${track.id}`,
-      }),
-    );
+    return parsedTracks.map((track: SongResponse) => ({
+      title: track.name,
+      artists: track.artists.map(({ name }) => name).join(', '),
+      coverUrl: track.album.images[0].url,
+      url: `https://open.spotify.com/track/${track.id}`,
+    }));
   } catch (error) {
     console.error('Error fetching recently played:', error);
     return null;

@@ -1,45 +1,10 @@
 import i18n, { type Config } from 'sveltekit-i18n';
 
-export const defaultLocale = 'sl';
+export const defaultLocale = 'en';
 
 const config: Config = {
   preprocess: 'preserveArrays',
   loaders: [
-    {
-      locale: 'sl',
-      key: 'common',
-      loader: async () => (await import('./i18n/sl/common.json')).default,
-    },
-    {
-      locale: 'sl',
-      key: 'home',
-      routes: ['/'],
-      loader: async () => (await import('./i18n/sl/home.json')).default,
-    },
-    {
-      locale: 'sl',
-      key: 'work',
-      routes: ['/work'],
-      loader: async () => (await import('./i18n/sl/work.json')).default,
-    },
-    {
-      locale: 'sl',
-      key: 'projects',
-      routes: ['/projects'],
-      loader: async () => (await import('./i18n/sl/projects.json')).default,
-    },
-    {
-      locale: 'sl',
-      key: 'highlights',
-      routes: ['/highlights'],
-      loader: async () => (await import('./i18n/sl/highlights.json')).default,
-    },
-    {
-      locale: 'sl',
-      key: 'music',
-      routes: ['/music'],
-      loader: async () => (await import('./i18n/sl/music.json')).default,
-    },
     {
       locale: 'en',
       key: 'common',

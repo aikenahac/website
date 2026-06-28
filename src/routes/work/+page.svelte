@@ -3,6 +3,7 @@
   import { t } from '$lib/translations';
   import type { JobBulletItem, JobItem } from '$lib/types';
   import { workJobs } from '$lib/work';
+  import { reveal } from '$lib/actions/reveal';
 
   const getTranslationArray = <T,>(key: string): T[] => {
     const value = $t(key);
@@ -24,10 +25,10 @@
   );
 </script>
 
-<div class="mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
+<div use:reveal class="card mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
   <h1 class="font-mono text-4xl font-bold text-aipink">
     {$t('work.title')}
-    [ <a class="underline" href="/cv.pdf" target="_blank">CV</a> ]
+    [ <a class="underline" href="/cv.pdf" target="_blank" data-cursor="open">CV</a> ]
   </h1>
 </div>
 

@@ -4,7 +4,7 @@
   let { playlist }: { playlist: SpotifyPlaylist } = $props();
 </script>
 
-<a class="cassette" href={playlist.url} target="_blank">
+<a class="cassette" href={playlist.url} target="_blank" data-cursor="play">
   <div class="inner-frame">
     <div class="sticker">{playlist.title}</div>
     <div class="type-text">TYPE II</div>
@@ -59,6 +59,20 @@
       0 4px 8px rgba(0, 0, 0, 0.4),
       inset 0 1px 2px rgba(255, 255, 255, 0.1);
     transform: rotate(-2deg);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .cassette:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cassette {
+      transition: none;
+    }
+    .cassette:hover {
+      transform: rotate(-2deg);
+    }
   }
 
   .cassette::before {

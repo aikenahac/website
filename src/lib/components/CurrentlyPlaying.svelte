@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { SpotifySong } from '$lib/spotify/types';
   import { t } from '$lib/translations';
+  import { reveal } from '$lib/actions/reveal';
   import Track from './Track.svelte';
 
   let {
@@ -9,7 +10,7 @@
   }: { currentlyPlaying: SpotifySong | null; upNext: SpotifySong | null } = $props();
 </script>
 
-<div class="mt-8 flex w-full flex-col rounded-sm border-4 border-aipink p-6">
+<div use:reveal class="mt-8 flex w-full flex-col rounded-sm border-4 border-aipink p-6">
   <h2 class="mb-12 font-mono text-2xl font-bold text-aipink">{$t('music.playing')}</h2>
   <div class="flex flex-row items-center justify-around max-[950px]:flex-col">
     <div
@@ -27,7 +28,12 @@
       class="flex max-w-[45%] flex-col items-center justify-center max-[950px]:mt-8 min-[950px]:ml-8"
     >
       {#if currentlyPlaying}
-        <a class="text-center font-mono text-4xl font-bold text-aipink underline" href={currentlyPlaying.url} target="_blank">
+        <a
+          class="text-center font-mono text-4xl font-bold text-aipink underline"
+          href={currentlyPlaying.url}
+          target="_blank"
+          data-cursor="play"
+        >
           {currentlyPlaying.title}
         </a>
       {:else}

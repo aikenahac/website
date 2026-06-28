@@ -1,11 +1,12 @@
 <script lang="ts">
   import type { SpotifyArtist } from '$lib/spotify/types';
   import { t } from '$lib/translations';
+  import { reveal } from '$lib/actions/reveal';
 
   let { artists }: { artists: SpotifyArtist[] } = $props();
 </script>
 
-<div class="mt-8 flex w-full flex-col rounded-sm border border-aipink p-6">
+<div use:reveal class="mt-8 flex w-full flex-col rounded-sm border border-aipink p-6">
   <h2 class="mb-12 font-mono text-2xl font-bold text-aipink">{$t('music.top_artists')}</h2>
   <div
     class="grid w-full grid-cols-5 gap-y-6 max-[1300px]:grid-cols-4 max-[1050px]:grid-cols-3 max-[780px]:grid-cols-2 max-[560px]:grid-cols-1"
@@ -27,7 +28,8 @@
         <a
           class="text-center font-mono font-bold text-aipink underline"
           href={artist.url}
-          target="_blank">{artist.name}</a
+          target="_blank"
+          data-cursor="open">{artist.name}</a
         >
       </div>
     {/each}

@@ -32,9 +32,14 @@
     href={song.url}
     target="_blank"
     rel="noopener noreferrer"
+    data-cursor="play"
     class="mb-4 flex w-full flex-row items-center gap-3 rounded-sm border border-aipink px-4 py-2 transition-all duration-200 hover:opacity-80"
   >
-    <img src={song.coverUrl} alt={song.title} class="h-8 w-8 flex-shrink-0 rounded-sm object-cover" />
+    <img
+      src={song.coverUrl}
+      alt={song.title}
+      class="h-8 w-8 flex-shrink-0 rounded-sm object-cover"
+    />
     <span class="font-mono text-sm text-aipink">♫</span>
     <div class="flex min-w-0 flex-col">
       <span class="font-mono text-sm font-bold text-aipink">{song.title}</span>

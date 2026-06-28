@@ -1,6 +1,108 @@
+@import '@fontsource-variable/jetbrains-mono';
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* ---- Lenis smooth scroll ---- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* ---- Cute text selection ---- */
+::selection {
+  background-color: #d423c6;
+  color: #171512;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.35);
+}
+
+::-moz-selection {
+  background-color: #d423c6;
+  color: #171512;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.35);
+}
+
+/* ---- Custom cursor: hide the OS cursor only when our cursor is active ---- */
+html.cursor-none,
+html.cursor-none * {
+  cursor: none !important;
+}
+
+/* ---- Scroll reveal (used by the `reveal` action) ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 24px));
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Card polish: subtle pink glow + lift on hover ---- */
+.card {
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 35, 198, 0.9);
+  box-shadow:
+    0 0 0 1px rgba(212, 35, 198, 0.3),
+    0 18px 40px -20px rgba(212, 35, 198, 0.5);
+}
+
+/* ---- Page transitions (View Transitions API) ---- */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: vt-out 0.28s cubic-bezier(0.4, 0, 1, 1) forwards;
+  }
+  ::view-transition-new(root) {
+    animation: vt-in 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@keyframes vt-out {
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes vt-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 .vinyl {
   border-radius: 100%;
@@ -28,4 +130,16 @@
     rgba(0, 0, 0, 0.1) 100%
   );
   pointer-events: none;
+}
+
+/* ---- Respect reduced motion globally ---- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .card {
+    transition: none;
+  }
 }
