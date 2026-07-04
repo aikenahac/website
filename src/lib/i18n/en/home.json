@@ -3,16 +3,8 @@
 
   "hero": {
     "role": "Full-Stack Developer",
-    "scroll": "scroll",
-    "marquee": [
-      "honest software",
-      "ljubljana based",
-      "open source",
-      "react / next",
-      "typescript",
-      "react native + expo",
-      "full-stack developer"
-    ]
+    "location": "Ljubljana, Slovenia",
+    "scroll": "scroll"
   },
 
   "about_me": {
