@@ -48,9 +48,9 @@
         "<a class='text-[#DF3B3B] font-mono underline' href='https://preskok.si/sl/' target='_blank' data-cursor='open'>Preskok</a>",
     },
     {
-      key: '$aer$',
+      key: '$avr$',
       content:
-        "<a class='text-aipink font-mono underline' href='https://aerio.tech' target='_blank' data-cursor='open'>Aerio</a>",
+        "<a class='text-white font-mono underline' href='https://avarra.dev' target='_blank' data-cursor='open'>Avarra</a>",
     },
     {
       key: '$prs$',

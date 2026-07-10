@@ -1,6 +1,7 @@
 import type { JobReference } from '$lib/types';
 
 export type WorkJobId =
+  | 'avarra'
   | 'aerio'
   | 'prskalnik'
   | 'preskok'
@@ -21,6 +22,12 @@ export interface WorkJobMeta {
 }
 
 export const workJobs: WorkJobMeta[] = [
+  {
+    id: 'avarra',
+    start: 'Mar 2026',
+    current: true,
+    url: 'https://avarra.dev',
+  },
   {
     id: 'aerio',
     start: 'Feb 2021',

@@ -2,6 +2,12 @@
   "title": "My work experience",
   "current": "current",
   "jobs": {
+    "avarra": {
+      "title": "Co-Founder @ Avarra",
+      "location": "Ljubljana, Slovenia",
+      "paragraphs": [
+      ]
+    },
     "aerio": {
       "title": "Co-Founder @ Aerio",
       "location": "Ljubljana, Slovenia",
