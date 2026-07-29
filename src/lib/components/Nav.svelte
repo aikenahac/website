@@ -64,6 +64,10 @@
       name: $t('common.nav.music'),
       path: '/music',
     },
+    {
+      name: $t('common.nav.hire'),
+      path: '/hire',
+    },
   ];
 
   const text =

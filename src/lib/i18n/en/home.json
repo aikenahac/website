@@ -2,8 +2,11 @@
   "me_img_alt": "Picture of me",
 
   "hero": {
-    "role": "Full-Stack Developer",
-    "location": "Ljubljana, Slovenia",
+    "eyebrow": "Product Engineer",
+    "statement": "I make ambitious products feel simple.",
+    "hire_cta": "Work with me",
+    "work_cta": "Selected work",
+    "location": "Ljubljana · Remote Europe",
     "scroll": "scroll"
   },
 
