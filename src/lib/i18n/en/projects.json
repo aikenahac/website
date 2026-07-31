@@ -1,39 +1,89 @@
 {
-  "title": "My projects",
+  "meta": {
+    "title": "Projects — Aiken Tine Ahac",
+    "description": "Selected open-source libraries, developer tools, products, and experiments by Aiken Tine Ahac."
+  },
+  "title": "Projects.",
+  "intro": "A selection of open-source libraries, products, and experiments I've built.",
+  "labels": {
+    "featured": "Featured",
+    "languages": "Languages used",
+    "visit": "Visit project",
+    "source": "View source",
+    "live": "Live site"
+  },
+  "featured": {
+    "eyebrow": "Featured work",
+    "title": "Tools built for builders.",
+    "description": "Two open-source projects focused on making complex interfaces feel approachable: maps that compose naturally and data grids that work like users expect."
+  },
+  "more": {
+    "eyebrow": "More projects",
+    "title": "Products, packages, and experiments.",
+    "description": "A wider selection of shipped ideas—from community products and playful web apps to Flutter packages and practical utilities."
+  },
   "frivsspr": {
     "title": "FRI VSŠ Curriculum",
-    "description": "Curriculum for the education at the University of Ljubljana, Faculty of Computer and Information Science"
+    "category": "Education tool",
+    "description": "A clearer, more approachable curriculum browser for higher vocational studies at the University of Ljubljana's Faculty of Computer and Information Science."
   },
   "socialko": {
     "title": "Socialko",
-    "description": "Social media for cultsorganizations built as a graduation project."
+    "category": "Open-source platform",
+    "description": "An open-source social platform spanning a NestJS backend, Flutter applications, and React account-management tools, originally built as a graduation project."
   },
   "hdwyg": {
     "title": "HDWYG",
-    "description": "How Deep Will You Go - Connections that feel good is the north star. This is the rocket ship to get there. Original is the perfect game of emotional connection."
+    "category": "Conversation game",
+    "description": "How Deep Will You Go is a conversation game designed to move past small talk and create more meaningful connections."
   },
   "routes": {
     "title": "Google Maps Routes",
-    "description": "Flutter package for drawing routes between multiple points on a Google Map widget."
+    "category": "Flutter package",
+    "description": "A Flutter package for drawing routes through multiple points on Google Maps using the Google Directions API."
   },
   "app_tutorial": {
     "title": "Flutter App Tutorial",
-    "description": "Package for creating interactive app tutorials for your Flutter application"
+    "category": "Flutter package",
+    "description": "A package for building seamless, interactive onboarding flows that introduce users to an application's key features."
   },
   "imageproc": {
-    "title": "Web image processor",
-    "description": "Simple web app for processing images."
+    "title": "Web Image Processor",
+    "category": "Web utility",
+    "description": "A focused browser-based utility for processing and transforming images without a heavyweight editing workflow."
   },
   "mwh": {
     "title": "Mess With Humanity",
-    "description": "Create custom Cards Against Humanity decks online for free. Design white answer cards and black question cards, print professional PDFs, and play with friends."
+    "category": "Creative web app",
+    "description": "Create custom Cards Against Humanity-style decks, design question and answer cards, and export print-ready PDFs to play with friends."
   },
   "echo": {
     "title": "Echo",
-    "description": "Track your reading journey, discover new books, and connect with fellow readers."
+    "category": "Reading platform",
+    "description": "A social reading experience for tracking books, reflecting on a reading journey, discovering titles, and connecting with other readers."
   },
   "mapcn-rn": {
     "title": "mapcn-react-native",
-    "description": "Beautiful, ready to use, and customizable map components built on MapLibre. Styled with Nativewind. Zero config. One command setup."
+    "category": "React Native map library",
+    "description": "Beautiful, accessible, and customizable map components for React Native. Built on MapLibre and Mapbox, styled with NativeWind or Uniwind, and installed with one command.",
+    "image_alt": "mapcn-react-native preview showing three dark mobile map interfaces with routes, markers, and analytics",
+    "highlights": [
+      "Composable map primitives",
+      "MapLibre and Mapbox support",
+      "Theme-aware components",
+      "One-command setup"
+    ]
+  },
+  "gigatable": {
+    "title": "Gigatable",
+    "category": "React data grid",
+    "description": "A source-installed React data grid for TanStack Table with editable cells, range selection, Excel-compatible copy and paste, fill handles, virtualization, and undo/redo.",
+    "image_alt": "Gigatable preview describing an Excel-like React data grid with a source-installed workflow",
+    "highlights": [
+      "Editable cells and ranges",
+      "Excel-compatible clipboard",
+      "Row and column virtualization",
+      "Fill, undo, and redo"
+    ]
   }
 }

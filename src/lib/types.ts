@@ -39,10 +39,36 @@ export interface JobItem {
 }
 
 export interface ProjectItem {
+  slug: string;
   title: string;
-  url: string;
   description: string;
+  category: string;
+  featured: boolean;
+  siteUrl?: string;
+  githubUrl?: string;
+  githubRepositories: string[];
+  fallbackLanguages: ProjectLanguage[];
+  languages: ProjectLanguage[];
+  image?: string;
+  imageAlt?: string;
+  accent: ProjectAccent;
+  highlights?: string[];
 }
+
+export interface ProjectLanguage {
+  name: string;
+  percentage: number;
+}
+
+export interface ProjectLabels {
+  featured: string;
+  languages: string;
+  visit: string;
+  source: string;
+  live: string;
+}
+
+export type ProjectAccent = 'pink' | 'mapcn' | 'gigatable';
 
 export interface HighlightItem {
   image: string;
