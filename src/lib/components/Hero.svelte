@@ -13,7 +13,10 @@
   });
 </script>
 
-<section class="hero relative flex min-h-[88vh] w-full flex-col justify-center" class:loaded>
+<section
+  class="hero relative flex min-h-[88vh] w-full flex-col justify-center max-[860px]:py-8"
+  class:loaded
+>
   <div class="mx-auto w-full max-w-6xl">
     <div
       class="grid grid-cols-[1.4fr_1fr] items-center gap-x-12 max-[860px]:grid-cols-1 max-[860px]:gap-y-10"
