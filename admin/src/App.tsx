@@ -53,12 +53,31 @@ const updateCaption = async (id: string, caption: string): Promise<HighlightImag
   return data.items;
 };
 
+const deleteImage = async (id: string): Promise<HighlightImage[]> => {
+  const response = await fetch('/api/images', {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ id }),
+  });
+
+  const data = (await response.json()) as ApiResponse;
+
+  if (!response.ok) {
+    throw new Error(data.error ?? 'Failed to delete image.');
+  }
+
+  return data.items;
+};
+
 function App() {
   const [images, setImages] = useState<HighlightImage[]>([]);
   const [selectedImageId, setSelectedImageId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSyncing, setIsSyncing] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const selectedImage = useMemo(
@@ -119,6 +138,21 @@ function App() {
     }
   };
 
+  const handleDeleteImage = async (id: string) => {
+    try {
+      setErrorMessage(null);
+      setIsDeleting(true);
+      const remainingImages = await deleteImage(id);
+      setImages(remainingImages);
+      setSelectedImageId(null);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Failed to delete image.';
+      setErrorMessage(message);
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-zinc-100">
       <div className="mx-auto w-full max-w-[1800px] px-8 py-8">
@@ -150,12 +184,14 @@ function App() {
 
         <EditCaptionDialog
           image={selectedImage}
+          isDeleting={isDeleting}
           isSaving={isSaving}
           onOpenChange={(isOpen) => {
             if (!isOpen) {
               setSelectedImageId(null);
             }
           }}
+          onDelete={handleDeleteImage}
           onSave={handleSaveCaption}
         />
       </div>

@@ -26,7 +26,6 @@ This starts:
 The API reads S3 credentials from `../.env` (repo root), using the same variables as the website highlights page:
 
 - `S3_ENDPOINT`
-- `S3_PUBLIC_URL`
 - `S3_ACCESS_KEY`
 - `S3_SECRET_KEY`
 - `S3_REGION`
@@ -43,7 +42,7 @@ Each item has this shape:
 
 ```ts
 type HighlightImage = {
-  id: string;
+  id: string; // Canonical S3 object key
   url: string;
   caption?: string;
 };
@@ -54,3 +53,5 @@ type HighlightImage = {
 - `GET /api/images` - load caption data from JSON file
 - `POST /api/sync-images` - list images from S3 and merge into JSON file
 - `POST /api/update-caption` - update one caption by `{ id, caption }`
+- `DELETE /api/images` - permanently delete an image from S3 and remove its JSON entry
+- `GET /media/:key` - serve an authenticated S3 image to the local admin
