@@ -103,18 +103,6 @@
       <p class="project-description">{project.description}</p>
     </div>
 
-    {#if project.languages.length}
-      <div class="language-list compact-languages" aria-label={labels.languages}>
-        {#each project.languages as language}
-          <span class="language-chip">
-            <i aria-hidden="true"></i>
-            {language.name}
-            <small>{language.percentage}%</small>
-          </span>
-        {/each}
-      </div>
-    {/if}
-
     <div class="compact-actions" aria-label={`${project.title} links`}>
       {#if project.siteUrl}
         <a
