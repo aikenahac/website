@@ -59,18 +59,6 @@
         </ul>
       {/if}
 
-      {#if project.languages.length}
-        <div class="language-list" aria-label={labels.languages}>
-          {#each project.languages as language}
-            <span class="language-chip">
-              <i aria-hidden="true"></i>
-              {language.name}
-              <small>{language.percentage}%</small>
-            </span>
-          {/each}
-        </div>
-      {/if}
-
       <div class="project-actions">
         {#if project.siteUrl}
           <a
