@@ -57,8 +57,8 @@
         unclear brief to a working release.
       </p>
       <p class="font-mono leading-relaxed text-aipink opacity-75">
-        I’m interested in senior frontend and product-engineering work with a fully remote team
-        that can hire in Slovenia or work B2B.
+        Senior frontend or product-engineering work with a fully remote
+        team able to work B2B in Europe. Also willing to relocate with support.
       </p>
     </div>
   </section>
