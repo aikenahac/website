@@ -69,7 +69,7 @@
   }
 
   const gear = [
-    'MacBook Pro M1 Max 16"',
+    'MacBook Pro M4 Max 14"',
     'Logitech MX Master 3',
     'Logitech MX Mechanical Mini',
     'Xiaomi G34WQi 34"',
