@@ -46,6 +46,7 @@ export const projectDefinitions: ProjectDefinition[] = [
   {
     slug: 'echo',
     translationKey: 'echo',
+    siteUrl: 'https://echoreads.app',
     githubUrl: 'https://github.com/aikenahac/echo',
     githubRepositories: ['aikenahac/echo'],
     fallbackLanguages: [
