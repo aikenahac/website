@@ -7,6 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "sync:highlight-captions": "node scripts/copy-highlight-captions.mjs && node scripts/fetch-highlight-dimensions.mjs",
+    "spotify:token": "node scripts/spotify-refresh-token.mjs",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --write .",

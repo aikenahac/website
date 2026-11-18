@@ -3,7 +3,7 @@
   import { t } from '$lib/translations';
   import type { JobBulletItem, JobItem } from '$lib/types';
   import { workJobs } from '$lib/work';
-  import { reveal } from '$lib/actions/reveal';
+  import PageHeader from '$lib/components/PageHeader.svelte';
 
   const getTranslationArray = <T,>(key: string): T[] => {
     const value = $t(key);
@@ -25,13 +25,32 @@
   );
 </script>
 
-<div use:reveal class="card mt-8 flex w-full flex-col gap-4 rounded-sm border border-aipink p-6">
-  <h1 class="font-mono text-4xl font-bold text-aipink">
-    {$t('work.title')}
-    [ <a class="underline" href="/cv.pdf" target="_blank" data-cursor="open">CV</a> ]
-  </h1>
+<PageHeader index="02" title={$t('work.title')}>
+  {#snippet aside()}
+    <a
+      class="cv-link inline-flex items-center gap-2 border border-aipink px-5 py-3 text-sm font-bold"
+      href="/cv.pdf"
+      target="_blank"
+      data-cursor="open">[ CV ] ↓</a
+    >
+  {/snippet}
+</PageHeader>
+
+<div class="mt-16 flex w-full flex-col">
+  {#each positions as job}
+    <Job {job} />
+  {/each}
 </div>
 
-{#each positions as job}
-  <Job {job} />
-{/each}
+<style>
+  .cv-link {
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .cv-link:hover {
+    background-color: #d423c6;
+    color: #171512;
+  }
+</style>

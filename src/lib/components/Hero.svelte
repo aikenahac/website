@@ -25,9 +25,13 @@
         <p class="hero-eyebrow mb-5 font-mono text-xs uppercase tracking-[0.24em] text-aipink">
           {$t('home.hero.eyebrow')}
         </p>
-        <h1 class="hero-name font-mono font-bold leading-[0.95] text-aipink">
+        <h1 class="hero-name display font-mono text-aipink">
           {#each words as word, i (word)}
-            <span class="word-mask"><span class="word" style={`--i:${i}`}>{word}</span></span>
+            <span class="word-mask"
+              ><span class={['word', i === 1 && 'display-outline'].join(' ')} style={`--i:${i}`}
+                >{word}</span
+              ></span
+            >
           {/each}
         </h1>
 
@@ -79,8 +83,12 @@
 
 <style>
   .hero-name {
-    font-size: clamp(3rem, 8.5vw, 7.2rem);
-    text-shadow: 0 0 40px rgba(212, 35, 198, 0.25);
+    font-size: clamp(3.5rem, 11vw, 10rem);
+    filter: drop-shadow(0 0 32px rgba(212, 35, 198, 0.4));
+  }
+
+  .hero-name :global(.display-outline) {
+    -webkit-text-stroke-width: 2px;
   }
 
   .hero-eyebrow {

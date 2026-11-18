@@ -1,11 +1,15 @@
 {
   "title": "Music?",
+  "kicker": "Live from my Spotify",
   "playing": "Currently playing",
+  "on_air": "On air",
   "nothing": "Nothing is playing",
   "paused": "Paused",
   "next": "Up next",
   "nothing_next": "Nothing up next",
   "recently_played": "Recently played",
+  "side": "Side",
   "top_artists": "My top artists",
-  "playlists": "My playlists"
+  "playlists": "My playlists",
+  "tapes": "tapes"
 }

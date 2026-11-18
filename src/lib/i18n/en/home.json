@@ -14,7 +14,28 @@
     "title": "About me",
     "intro": "Hello there! I'm Aiken, a $age$-year-old software developer from Slovenia, currently living in the beautiful old Ljubljana city center. I've been working with startups for $yrs$+ years. I'm currently working for $work$ and am a Co-Founder of $avr$ and  $prs$."
   },
+  "stats": {
+    "age": "years old",
+    "years": "years with startups",
+    "based": "based in",
+    "city": "Ljubljana"
+  },
   "gear": "My Gear",
+  "gear_kinds": {
+    "laptop": "Laptop",
+    "mouse": "Mouse",
+    "keyboard": "Keyboard",
+    "monitor": "Monitor"
+  },
   "tech": "Personal Stack",
+  "tech_kinds": {
+    "web": "Web",
+    "mobile": "Mobile",
+    "backend": "Backend",
+    "auth": "Auth",
+    "orm": "ORM",
+    "database": "Database",
+    "languages": "Languages"
+  },
   "net_friends": "Friends from the net"
 }

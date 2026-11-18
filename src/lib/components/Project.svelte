@@ -23,8 +23,9 @@
 
 {#if project.featured}
   <article
-    use:reveal={{ delay: index * 90 }}
+    use:reveal={{ delay: 0 }}
     class="featured-project"
+    class:flip={index % 2 === 1}
     style={`--project-accent: ${accent}`}
   >
     <div class="featured-artwork-wrap">
@@ -40,6 +41,7 @@
     </div>
 
     <div class="featured-content">
+      <span class="featured-number" aria-hidden="true">0{index + 1}</span>
       <div class="project-kicker">
         <span class="project-index">0{index + 1}</span>
         <span>{project.category}</span>
@@ -207,6 +209,53 @@
 
   .featured-project:hover .featured-artwork {
     filter: saturate(1.08) contrast(1.03);
+  }
+
+  .featured-number {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 0.5rem;
+    z-index: -1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--project-accent);
+    font-size: clamp(5rem, 12vw, 10rem);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 0.85;
+    opacity: 0.25;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 0.5s ease;
+  }
+
+  .featured-project:hover .featured-number {
+    opacity: 0.5;
+  }
+
+  /* Wide screens: image and copy side by side, alternating per row. */
+  @media (min-width: 1000px) {
+    .featured-project {
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      grid-template-rows: none;
+    }
+
+    .featured-artwork-wrap {
+      display: flex;
+      align-items: center;
+      border-bottom: 0;
+      border-right: 1px solid color-mix(in srgb, var(--project-accent) 42%, transparent);
+    }
+
+    .flip .featured-artwork-wrap {
+      order: 2;
+      border-right: 0;
+      border-left: 1px solid color-mix(in srgb, var(--project-accent) 42%, transparent);
+    }
+
+    .featured-content {
+      justify-content: center;
+      padding: clamp(1.5rem, 3vw, 3rem);
+    }
   }
 
   .featured-content {

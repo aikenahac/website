@@ -70,24 +70,61 @@
     },
   ];
 
-  const text =
-    'hover:pointer font-mono text-aipink transition-all duration-200 hover:scale-110 hover:font-bold';
+  const text = 'nav-link relative font-mono text-aipink transition-colors duration-200';
+
+  let navEl: HTMLElement | undefined = $state();
+  let links: HTMLAnchorElement[] = $state([]);
+  let indicator = $state({ x: 0, y: 0, w: 0, visible: false });
+
+  function moveIndicator() {
+    const i = routes.findIndex((r) => r.path === $page.url.pathname);
+    const link = links[i];
+    if (!link || !navEl) {
+      indicator = { ...indicator, visible: false };
+      return;
+    }
+    indicator = {
+      x: link.offsetLeft,
+      y: link.offsetTop + link.offsetHeight + 2,
+      w: link.offsetWidth,
+      visible: true,
+    };
+  }
+
+  $effect(() => {
+    void $page.url.pathname;
+    moveIndicator();
+    window.addEventListener('resize', moveIndicator);
+    return () => window.removeEventListener('resize', moveIndicator);
+  });
 </script>
 
-<div
-  class="flex w-full flex-row items-center justify-start rounded-sm border border-aipink px-4 py-2 max-[860px]:grid max-[860px]:grid-cols-2"
+<nav
+  bind:this={navEl}
+  class="sticky top-4 z-40 flex w-full flex-row items-center justify-start rounded-sm border border-aipink/70 bg-aiblack/70 px-5 py-3 shadow-[0_10px_40px_-20px_rgba(212,35,198,0.6)] backdrop-blur-md max-[860px]:static max-[860px]:grid max-[860px]:grid-cols-2 max-[860px]:gap-y-2"
 >
   {#each routes as route, i}
     <a
+      bind:this={links[i]}
       use:magnetic={{ strength: 0.18, radius: 30 }}
       data-cursor=""
-      class={[text, route.path === $page.url.pathname && 'font-bold'].join(' ')}
-      href={route.path}>{route.name} <span class="min-[860px]:hidden">☽</span></a
+      aria-current={route.path === $page.url.pathname ? 'page' : undefined}
+      class={[text, route.path === $page.url.pathname ? 'font-bold' : 'opacity-75'].join(' ')}
+      href={route.path}
+      ><span class="mr-1 text-[0.65rem] opacity-50">0{i + 1}</span>{route.name}
+      <span class="min-[860px]:hidden">☽</span></a
     >
     {#if i !== routes.length - 1}
-      <p class="mx-6 text-aipink max-[860px]:hidden">☽</p>
+      <p class="mx-5 text-aipink opacity-50 max-[860px]:hidden">☽</p>
     {/if}
   {/each}
+
+  <span
+    class="nav-indicator max-[860px]:hidden"
+    class:visible={indicator.visible}
+    style={`transform: translate(${indicator.x}px, ${indicator.y}px); width: ${indicator.w}px;`}
+    aria-hidden="true"
+  ></span>
 
   <button
     type="button"
@@ -107,9 +144,32 @@
       >
     {/each}
   </button>
-</div>
+</nav>
 
 <style>
+  .nav-link:hover {
+    opacity: 1;
+    color: white;
+  }
+
+  .nav-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    background: #d423c6;
+    box-shadow: 0 0 12px rgba(212, 35, 198, 0.9);
+    opacity: 0;
+    transition:
+      transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+      width 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.3s ease;
+  }
+
+  .nav-indicator.visible {
+    opacity: 1;
+  }
+
   .cat {
     position: relative;
     line-height: 1;
@@ -166,6 +226,9 @@
   @media (prefers-reduced-motion: reduce) {
     .cat-face.bounce {
       animation: none;
+    }
+    .nav-indicator {
+      transition: none;
     }
   }
 </style>

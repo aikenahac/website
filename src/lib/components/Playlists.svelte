@@ -3,6 +3,9 @@
   import { t } from '$lib/translations';
   import { reveal } from '$lib/actions/reveal';
   import Cassette from './Cassette.svelte';
+  import SectionHeading from './SectionHeading.svelte';
+
+  let { index }: { index: string } = $props();
 
   const playlists: SpotifyPlaylist[] = [
     {
@@ -24,11 +27,27 @@
   ];
 </script>
 
-<div use:reveal class="mt-8 flex w-full flex-col rounded-sm border border-aipink p-6">
-  <h2 class="mb-12 font-mono text-2xl font-bold text-aipink">{$t('music.playlists')}</h2>
-  <div class="grid w-full grid-cols-4 gap-y-6 max-[1180px]:grid-cols-2 max-[650px]:grid-cols-1">
-    {#each playlists as playlist}
-      <Cassette {playlist} />
-    {/each}
+<section class="mt-28 w-full max-[860px]:mt-20">
+  <SectionHeading {index} title={$t('music.playlists')}>
+    {#snippet aside()}
+      {playlists.length} {$t('music.tapes')}
+    {/snippet}
+  </SectionHeading>
+
+  <div use:reveal class="tray ticks w-full px-6 py-12">
+    <div class="grid w-full grid-cols-4 gap-y-10 max-[1180px]:grid-cols-2 max-[650px]:grid-cols-1">
+      {#each playlists as playlist}
+        <Cassette {playlist} />
+      {/each}
+    </div>
   </div>
-</div>
+</section>
+
+<style>
+  .tray {
+    background-color: rgba(0, 0, 0, 0.35);
+    box-shadow:
+      inset 0 20px 40px -20px rgba(0, 0, 0, 0.9),
+      inset 0 -1px 0 rgba(212, 35, 198, 0.25);
+  }
+</style>
